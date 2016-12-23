@@ -1,0 +1,77 @@
+$gradient-start: lighten(adjust-hue($primary, -10deg), 10%)
+$gradient-end: lighten(adjust-hue($primary, 10deg), 5%)
+$gradient-top: linear-gradient(135deg, $gradient-start 20%, transparent 20%, transparent 80%, $gradient-end 80%)
+$gradient-bottom: linear-gradient($primary, lighten($primary, 5%))
+
+.header
+  align-items: center
+  background: $plum
+  color: $plum-dark
+  display: flex
+  justify-content: flex-start
+  padding: 3rem 2rem
+  position: relative
+  text-align: left
+
+$height: 96px
+$width: 486px
+
+.header-figure
+  background-image: url("../images/html-reference-title.png")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: $width $height
+  display: inline-block
+  height: $height
+  overflow: hidden
+  text-indent: -290486px
+  vertical-align: top
+  width: $width
+  @media (max-width: 600px)
+    background-size: ($width / 2) ($height / 2)
+    height: $height / 2
+    width: $width / 2
+
+.header-title
+  color: $plum-invert
+  font-size: 1.4rem
+  font-weight: $weight-bold
+  margin-top: 2rem
+  text-shadow: 0 2px 4px rgba(#000, 0.1)
+
+.header-subtitle
+  color: $plum-light
+  max-width: 40em
+  a
+    border-bottom: 1px solid rgba($plum-light, 0.2)
+    color: $plum-light
+    &:hover
+      border-bottom-color: $plum-light
+      color: $plum-light
+  strong
+    color: $plum-light
+
+.back
+  align-items: center
+  background: $link
+  color: $link-invert
+  display: flex
+  font-size: 0.8rem
+  justify-content: flex-start
+  padding: 1rem 1.2rem
+  strong
+    color: inherit
+    margin-left: 1em
+  &:hover
+    background: $alpha
+    color: $plum
+    .icon:before,
+    .icon:after
+      background: $plum
+
++desktop
+  .header
+    justify-content: center
+    min-height: 400px
+    padding: 4rem
+    text-align: center

@@ -1,0 +1,93 @@
+.attribute--required
+  .attribute-name
+    .tag
+      background: $red
+      color: $red-invert
+
+.attribute-name
+  .tag
+    background: lavender
+    background: #BADBFF
+    // color: $plum
+
+.attribute-is-required
+  color: $red
+  font-size: 0.8em
+
+.attribute-description
+  font-size: 0.8em
+  line-height: 1.4
+  margin-top: 0.5em
+
+.value-name
+  position: relative
+  .tag
+    background: $yellow
+    // color: $yellow-invert
+    background: #DEFF82
+    &:before
+      color: #000
+      content: "="
+      font-weight: $weight-normal
+      margin-right: 0.5em
+      opacity: 0.5
+      pointer-events: none
+      position: absolute
+      right: 100%
+
+.value-header
+  overflow: auto
+
+.value-description
+  color: $text-light
+  font-size: 0.7em
+  line-height: 1.2
+  margin-top: 0.5em
+  strong
+    color: inherit
+  p,
+  pre
+    margin-bottom: 0.5em
+    &:last-child
+      margin-bottom: 0
+
+.value-code
+  background: $background
+  font-size: 12px
+  overflow: auto
+  padding: 1em
+  max-width: 100%
+
++mobile
+  .attribute
+    margin-top: 2rem
+    padding: 0 2rem
+  .value
+    margin-top: 1rem
+    padding-left: 1rem
+
++desktop
+  .attribute
+    display: flex
+    margin-top: 2rem
+    padding: 0 3rem
+  .attribute-header
+    padding-right: 2rem
+    width: 25%
+  .attribute-values
+    flex-grow: 1
+    flex-shrink: 1
+  .value
+    display: flex
+  .value + .value
+    margin-top: 1rem
+  .value--example
+    margin-top: 0 !important
+  .value-header
+    flex-grow: 1
+    flex-shrink: 1
+    padding-right: 2rem
+  .value-preview
+    flex-shrink: 0
+    width: 33%
+

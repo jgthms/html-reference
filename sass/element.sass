@@ -1,0 +1,35 @@
+.element
+  overflow: hidden
+  padding-bottom: 3rem
+  padding-top: 2rem
+
+.element-name
+  font-size: 1.2rem
+  font-weight: $weight-bold
+  a
+    border-bottom: 1px solid transparent
+    color: $text-strong
+    display: inline-block
+    position: relative
+    vertical-align: top
+    span
+      color: $border
+      padding-right: 0.6em
+      position: absolute
+      right: 100%
+      top: 0
+    &:hover
+      border-bottom-color: $link
+      color: $link
+      span
+        color: $link
+
++mobile
+  .element-header
+    padding-left: 2rem
+    padding-right: 2rem
+
++desktop
+  .element-header
+    padding-left: 3rem
+    padding-right: 3rem
