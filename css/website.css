@@ -1023,6 +1023,9 @@ html ::selection {
     width: 33%; } }
 
 .element {
+  background-image: linear-gradient(#ffe4db, #fff);
+  background-repeat: no-repeat;
+  background-size: 100% 4rem;
   border-top: 2px solid #ff470f;
   overflow: hidden;
   padding-bottom: 3rem;
