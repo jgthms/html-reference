@@ -36,10 +36,12 @@
   li
     display: inline-block
     vertical-align: top
+  p
+    margin-top: 0.5em
 
 .menu-collection-link
   border-radius: 2px
-  padding: 2px 6px
+  padding: 3px 6px
   &:hover
     background: $alpha
     color: $alpha-invert
@@ -241,8 +243,13 @@
     flex-shrink: 0
   .menu-collections
     font-size: 0.8rem
-    li
-      margin-left: -2px
+    ul
+      display: flex
+      flex-wrap: wrap
+    p
+      .menu-collection-link
+        position: relative
+        right: 6px
   .menu-nav
     border-top: 1px solid $border
     display: flex

@@ -1,7 +1,33 @@
 .element
+  border-top: 2px solid $primary
   overflow: hidden
   padding-bottom: 3rem
   padding-top: 2rem
+
+.element-links
+  align-items: center
+  display: flex
+  font-size: 0.7rem
+  justify-content: flex-end
+  opacity: 0.5
+  transition-duration: $speed
+  transition-property: opacity
+  a
+    border-bottom: 1px solid transparent
+    color: $text-light
+    margin-left: 1em
+    &:before
+      left: auto
+      right: 0
+      transform: translateX(0) translateY(0)
+      white-space: nowrap
+    &:hover
+      border-bottom-color: $link
+      color: $link
+      &:before
+        transform: translateX(0) translateY(-4px)
+  &:hover
+    opacity: 1
 
 .element-name
   font-size: 1.2rem
@@ -28,8 +54,13 @@
   .element-header
     padding-left: 2rem
     padding-right: 2rem
+  .element-links
+    margin-bottom: 0.5rem
 
 +desktop
   .element-header
     padding-left: 3rem
     padding-right: 3rem
+  .element-links
+    float: right
+    padding: 0.25rem 0

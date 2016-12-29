@@ -37,12 +37,15 @@
 
 .value-header
   overflow: auto
+  padding-left: 1rem
+
+.value-name
+  margin-bottom: 0.5em
 
 .value-description
   color: $text-light
   font-size: 0.7em
   line-height: 1.2
-  margin-top: 0.5em
   strong
     color: inherit
   p,
@@ -50,6 +53,13 @@
     margin-bottom: 0.5em
     &:last-child
       margin-bottom: 0
+  code
+    background: $background
+    border-radius: 2px
+    padding: 0 4px 2px
+    position: relative
+    top: -1px
+    vertical-align: baseline
 
 .value-code
   background: $background
@@ -58,12 +68,17 @@
   padding: 1em
   max-width: 100%
 
+.value-preview
+  font-size: 14px
+
 +mobile
   .attribute
     margin-top: 2rem
     padding: 0 2rem
   .value
     margin-top: 1rem
+  .value-preview
+    margin-top: 0.5rem
     padding-left: 1rem
 
 +desktop
@@ -72,7 +87,9 @@
     margin-top: 2rem
     padding: 0 3rem
   .attribute-header
-    padding-right: 2rem
+    flex-grow: 0
+    flex-shrink: 0
+    padding-right: 1rem
     width: 25%
   .attribute-values
     flex-grow: 1
@@ -82,7 +99,7 @@
   .value + .value
     margin-top: 1rem
   .value--example
-    margin-top: 0 !important
+    margin-top: 0.5rem !important
   .value-header
     flex-grow: 1
     flex-shrink: 1

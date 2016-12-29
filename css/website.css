@@ -82,7 +82,7 @@ th {
   bottom: 100%;
   color: #fff;
   content: attr(data-tooltip);
-  font-family: BlinkMacSystemFont, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 0.6rem;
   left: 50%;
   line-height: 1.2;
@@ -118,7 +118,7 @@ html {
 
 body {
   color: #4d4d4d;
-  font-family: BlinkMacSystemFont, "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.6; }
 
@@ -334,10 +334,12 @@ html ::selection {
   .menu-collections li {
     display: inline-block;
     vertical-align: top; }
+  .menu-collections p {
+    margin-top: 0.5em; }
 
 .menu-collection-link {
   border-radius: 2px;
-  padding: 2px 6px; }
+  padding: 3px 6px; }
   .menu-collection-link:hover {
     background: #ff470f;
     color: #fff; }
@@ -540,8 +542,12 @@ html ::selection {
     flex-shrink: 0; }
   .menu-collections {
     font-size: 0.8rem; }
-    .menu-collections li {
-      margin-left: -2px; }
+    .menu-collections ul {
+      display: flex;
+      flex-wrap: wrap; }
+    .menu-collections p .menu-collection-link {
+      position: relative;
+      right: 6px; }
   .menu-nav {
     border-top: 1px solid #e6e6e6;
     display: flex;
@@ -558,8 +564,8 @@ html ::selection {
 
 .header {
   align-items: center;
-  background: #310736;
-  color: #622369;
+  background: #072336;
+  color: #135e90;
   display: flex;
   justify-content: flex-start;
   padding: 3rem 2rem;
@@ -591,16 +597,16 @@ html ::selection {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
 
 .header-subtitle {
-  color: #94529c;
+  color: #81c3ef;
   max-width: 40em; }
   .header-subtitle a {
-    border-bottom: 1px solid rgba(148, 82, 156, 0.2);
-    color: #94529c; }
+    border-bottom: 1px solid rgba(129, 195, 239, 0.2);
+    color: #81c3ef; }
     .header-subtitle a:hover {
-      border-bottom-color: #94529c;
-      color: #94529c; }
+      border-bottom-color: #81c3ef;
+      color: #81c3ef; }
   .header-subtitle strong {
-    color: #94529c; }
+    color: #81c3ef; }
 
 .back {
   align-items: center;
@@ -615,10 +621,10 @@ html ::selection {
     margin-left: 1em; }
   .back:hover {
     background: #ff470f;
-    color: #310736; }
+    color: #072336; }
     .back:hover .icon:before,
     .back:hover .icon:after {
-      background: #310736; }
+      background: #072336; }
 
 @media (min-width: 800px) {
   .header {
@@ -705,10 +711,14 @@ html ::selection {
     transform: scale(1); }
 
 .footer-share-nav {
+  align-items: center;
+  bottom: 0;
+  display: flex;
   font-weight: 700;
+  padding: 0 1rem;
   position: absolute;
-  right: 1rem;
-  top: 1rem; }
+  right: 0;
+  top: 0; }
 
 @media (max-width: 799px) {
   .footer-share--social {
@@ -735,8 +745,8 @@ html ::selection {
     display: none; } }
 
 .heading {
-  background: #310736;
-  color: #94529c;
+  background: #072336;
+  color: #81c3ef;
   padding: 4rem 3rem; }
 
 .heading-title {
@@ -759,7 +769,7 @@ html ::selection {
   font-family: monospace, "Source Code Pro", "Consolas", "Monaco", "Courier", monospace;
   font-size: 14px;
   font-weight: 700;
-  padding: 2px 6px 3px;
+  padding: 1px 6px 3px;
   vertical-align: top; }
 
 .modal {
@@ -939,13 +949,16 @@ html ::selection {
       right: 100%; }
 
 .value-header {
-  overflow: auto; }
+  overflow: auto;
+  padding-left: 1rem; }
+
+.value-name {
+  margin-bottom: 0.5em; }
 
 .value-description {
   color: gray;
   font-size: 0.7em;
-  line-height: 1.2;
-  margin-top: 0.5em; }
+  line-height: 1.2; }
   .value-description strong {
     color: inherit; }
   .value-description p,
@@ -954,6 +967,13 @@ html ::selection {
     .value-description p:last-child,
     .value-description pre:last-child {
       margin-bottom: 0; }
+  .value-description code {
+    background: #f2f2f2;
+    border-radius: 2px;
+    padding: 0 4px 2px;
+    position: relative;
+    top: -1px;
+    vertical-align: baseline; }
 
 .value-code {
   background: #f2f2f2;
@@ -962,12 +982,17 @@ html ::selection {
   padding: 1em;
   max-width: 100%; }
 
+.value-preview {
+  font-size: 14px; }
+
 @media (max-width: 799px) {
   .attribute {
     margin-top: 2rem;
     padding: 0 2rem; }
   .value {
-    margin-top: 1rem;
+    margin-top: 1rem; }
+  .value-preview {
+    margin-top: 0.5rem;
     padding-left: 1rem; } }
 
 @media (min-width: 800px) {
@@ -976,7 +1001,9 @@ html ::selection {
     margin-top: 2rem;
     padding: 0 3rem; }
   .attribute-header {
-    padding-right: 2rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-right: 1rem;
     width: 25%; }
   .attribute-values {
     flex-grow: 1;
@@ -986,7 +1013,7 @@ html ::selection {
   .value + .value {
     margin-top: 1rem; }
   .value--example {
-    margin-top: 0 !important; }
+    margin-top: 0.5rem !important; }
   .value-header {
     flex-grow: 1;
     flex-shrink: 1;
@@ -996,9 +1023,35 @@ html ::selection {
     width: 33%; } }
 
 .element {
+  border-top: 2px solid #ff470f;
   overflow: hidden;
   padding-bottom: 3rem;
   padding-top: 2rem; }
+
+.element-links {
+  align-items: center;
+  display: flex;
+  font-size: 0.7rem;
+  justify-content: flex-end;
+  opacity: 0.5;
+  transition-duration: 300ms;
+  transition-property: opacity; }
+  .element-links a {
+    border-bottom: 1px solid transparent;
+    color: gray;
+    margin-left: 1em; }
+    .element-links a:before {
+      left: auto;
+      right: 0;
+      transform: translateX(0) translateY(0);
+      white-space: nowrap; }
+    .element-links a:hover {
+      border-bottom-color: #3273dc;
+      color: #3273dc; }
+      .element-links a:hover:before {
+        transform: translateX(0) translateY(-4px); }
+  .element-links:hover {
+    opacity: 1; }
 
 .element-name {
   font-size: 1.2rem;
@@ -1024,12 +1077,17 @@ html ::selection {
 @media (max-width: 799px) {
   .element-header {
     padding-left: 2rem;
-    padding-right: 2rem; } }
+    padding-right: 2rem; }
+  .element-links {
+    margin-bottom: 0.5rem; } }
 
 @media (min-width: 800px) {
   .element-header {
     padding-left: 3rem;
-    padding-right: 3rem; } }
+    padding-right: 3rem; }
+  .element-links {
+    float: right;
+    padding: 0.25rem 0; } }
 
 .modal {
   z-index: 50; }
