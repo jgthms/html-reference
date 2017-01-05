@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var $menuHello = document.getElementById('menuHello');
   var $huggingFace = document.getElementById('huggingFace');
   var $carbon = document.getElementById('carbon');
+  var $placeholder = document.getElementById('placeholder');
 
   setTimeout(function() {
     if (window.carbonLoaded) {
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       $huggingFace.style.display = 'block';
       $carbon.style.display = 'none';
     }
+    $placeholder.style.display = 'none';
   }, 5000);
 });
 </script>
@@ -76,6 +78,11 @@ document.addEventListener('DOMContentLoaded', function() {
         Thank you! <img src="{{site.url}}/images/hugging-face.png" alt="Hugging face emoji">
       </p>
     </div>
+    <div id="placeholder" class="placeholder">
+      <div class="placeholder-image"><div></div></div>
+      <div class="placeholder-content"><div></div><div></div><div></div></div>
+      <div class="placeholder-footer"><div></div></div>
+    </div>
     <div id="carbon">
       <!-- <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=htmlreferenceio" id="_carbonads_js" onload ="window.helloCarbon()"></script> -->
     </div>
@@ -84,14 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <footer class="footer">
   <p class="footer-title">
-    <strong>{{site.description}}</strong> <small>Created by <a href="https://twitter.com/jgthms">@jgthms</a></small>
+    <strong>{{site.subtitle}}</strong> <small>Created by <a href="https://twitter.com/jgthms">@jgthms</a></small>
   </p>
-  <div class="footer-facebook">
-    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fhtmlreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670" width="100" height="20" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-  </div>
-  <div class="footer-github">
-    <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo=html-reference&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-  </div>
   <p class="footer-share footer-share--social">
     <strong class="footer-share-label">Share</strong>
     <a class="footer-share-button is-twitter"
@@ -111,4 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
     <a id="menu-nav-open" class="footer-share-nav">Menu</a>
   </p>
+  <div class="footer-facebook">
+    <iframe class="footer-iframe" data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcssreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670" width="100" height="20" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+  </div>
+  <div class="footer-github">
+    <iframe class="footer-iframe" data-src="https://ghbtns.com/github-btn.html?user=jgthms&repo=css-reference&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+  </div>
 </footer>

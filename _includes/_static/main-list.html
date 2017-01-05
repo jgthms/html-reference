@@ -1,0 +1,234 @@
+<section id="input" class="element">
+  <header class="element-header">
+    <nav class="element-links">
+      <a class="element-links-direct" href="\{{site.url}}/element/{{element_name}}/" data-element-name="{{element_name}}" data-tooltip="Single page for this element" target="_blank">Link</a>
+      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="{{element_name}}">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/{{element_name}}" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="element-name">
+      <a href="/#input">
+        <span>#</span>
+        input
+      </a>
+    </h2>
+    <div class="element-description">
+      The HTML element &lt;input&gt; is used to create interactive controls for web-based forms in order to accept data from the user. How an &lt;input&gt; works varies considerably depending on the value of its type attribute.
+    </div>
+  </header>
+
+  <article class="attribute attribute--required">
+    <header class="attribute-header">
+      <h3 class="attribute-name">
+        <span class="tag">type</span>
+      </h3>
+      <div class="attribute-description">
+        <p>Defines the type of form input.</p>
+        <strong class="attribute-is-required">Required.</strong>
+      </div>
+    </header>
+    <div class="attribute-values">
+      <article class="value">
+        <header class="value-header">
+          <h4 class="value-name">
+            <span class="tag">"text"</span>
+          </h4>
+          <div class="value-description">
+            <p>Simple single line text input that accepts any type of character.</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output"><input type="text"></div>
+        </aside>
+      </article>
+      <article class="value">
+        <header class="value-header">
+          <h4 class="value-name">
+            <span class="tag">"email"</span>
+          </h4>
+          <div class="value-description">
+            <p>Like a text input, but the browser will try to only allow valid email addresses.</p>
+            <p>On mobile devices, the email keyboard will show up.</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output"><input type="email"></div>
+        </aside>
+      </article>
+      <article class="value">
+        <header class="value-header">
+          <h4 class="value-name">
+            <span class="tag">"number"</span>
+          </h4>
+          <div class="value-description">
+            <p>Like a text input, but the browser will try to only allow numbers.</p>
+            <p>On mobile devices, the numeric keyboard will show up.</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output"><input type="number"></div>
+        </aside>
+      </article>
+      <article class="value">
+        <header class="value-header">
+          <h4 class="value-name">
+            <span class="tag">"checkbox"</span>
+          </h4>
+          <div class="value-description">
+            <p>A toggle checkbox that can only return one of two values: checked or unchecked.</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output"><input type="checkbox"></div>
+        </aside>
+      </article>
+      <div class="value value--example">
+        <header class="value-header">
+          <div class="value-description">
+            <p>You can wrap a checkbox in a label, to increase the click area:</p>
+            <pre class="value-code">&lt;label&gt;
+                &lt;input type=&quot;checkbox&quot;
+                I accept the terms and conditions
+              &lt;/label&gt;
+            </pre>
+            <p>Notice how clicking the text toggles the checkbox.</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output">
+            <label>
+              <input type="checkbox">
+              I accept the terms and conditions
+            </label>
+          </div>
+        </aside>
+      </div>
+      <article class="value">
+        <header class="value-header">
+          <h4 class="value-name">
+            <span class="tag">"radio"</span>
+          </h4>
+          <div class="value-description">
+            <p>Needs to be used used in combination with other radio buttons, so that they are mutually exclusive.</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output"><input type="radio"></div>
+        </aside>
+      </article>
+      <div class="value value--example">
+        <header class="value-header">
+          <div class="value-description">
+            <p>You link radio buttons through a similar <strong>name</strong> attribute:</p>
+            <pre class="value-code">&lt;label&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;newsletter&quot; value=&quot;yes&quot;&gt;
+                Yes
+              &lt;/label&gt;
+              &lt;label&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;newsletter&quot; value=&quot;no&quot;&gt;
+                No
+              &lt;/label&gt;
+            </pre>
+            <p>Notice how clicking one deselects the other.</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output">
+            <label>
+              <input type="radio" name="newsletter" value="yes">
+              Yes
+            </label>
+            <label>
+              <input type="radio" name="newsletter" value="no">
+              No
+            </label>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  <article class="attribute attribute--required">
+    <div class="attribute-header">
+      <h3 class="attribute-name">
+        <span class="tag">name</span>
+      </h3>
+      <div class="attribute-description">
+        <p>Defines the unique identifier for that input within the form. It allows the server to access each input's value when submitted.</p>
+      </div>
+    </div>
+    <div class="attribute-values">
+      <article class="value">
+        <header class="value-header">
+          <h4 class="value-name">
+            <span class="tag">"first_name"</span>
+          </h4>
+          <div class="value-description">
+            <p>The name value can only contain alphanumeric characters <code>a-z</code> <code>A-Z</code> <code>0-9</code> and some special characters: <code>_</code> <code>-</code> …</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output">
+            <input type="text" name="first_name">
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  <article class="attribute">
+    <div class="attribute-header">
+      <h3 class="attribute-name">
+        <span class="tag">placeholder</span>
+      </h3>
+      <div class="attribute-description">
+        <p>Define a non-selectable placeholder text that only appears when the input is empty.</p>
+      </div>
+    </div>
+    <div class="attribute-values">
+      <article class="value">
+        <header class="value-header">
+          <h4 class="value-name">
+            <span class="tag">"e.g. alex@smith.com"</span>
+          </h4>
+          <div class="value-description">
+            <p>Simple single line text input that accepts any type of character.</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output"><input type="text" placeholder="e.g. alex@smith.com"></div>
+        </aside>
+      </article>
+    </div>
+  </article>
+
+  <article class="attribute attribute--no-value">
+    <div class="attribute-header">
+      <h3 class="attribute-name">
+        <span class="tag">required</span>
+      </h3>
+      <div class="attribute-description">
+        <p>Tells the browser that this input is <strong>required</strong>. Leaving it empty will show a warning.</p>
+      </div>
+    </div>
+    <div class="attribute-values">
+      <div class="value value--example">
+        <header class="value-header">
+          <div class="value-description">
+            <p>You simply need to add the <code>required</code> attribute with no value:</p>
+            <pre class="value-code">&lt;form&gt;
+              &lt;input type=&quot;text&quot; required&gt;
+            &lt;/form&gt;</pre>
+            <p>The browser should show a warning if you try to submit the form with an empty text input.</p>
+          </div>
+        </header>
+        <aside class="value-preview">
+          <div class="value-output">
+            <form>
+              <input type="text" required>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </article>
+</section>

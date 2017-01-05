@@ -26,6 +26,10 @@
     // color: $yellow-invert
     background: #DEFF82
     &:before
+      bottom: 50%
+      left: 100%
+      transform: translateX(0) translateY(50%)
+    &:after
       color: #000
       content: "="
       font-weight: $weight-normal
@@ -34,6 +38,8 @@
       pointer-events: none
       position: absolute
       right: 100%
+    &:hover:before
+      transform: translateX(4px) translateY(50%)
 
 .value-header
   overflow: auto
@@ -60,13 +66,16 @@
     position: relative
     top: -1px
     vertical-align: baseline
-
-.value-code
-  background: $background
-  font-size: 12px
-  overflow: auto
-  padding: 1em
-  max-width: 100%
+  pre
+    background: $background
+    font-size: 12px
+    overflow: auto
+    padding: 1em
+    max-width: 100%
+    code
+      background: none
+      padding: 0
+      position: static
 
 .value-preview
   font-size: 14px
@@ -90,7 +99,7 @@
     flex-grow: 0
     flex-shrink: 0
     padding-right: 1rem
-    width: 25%
+    width: 20%
   .attribute-values
     flex-grow: 1
     flex-shrink: 1

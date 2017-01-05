@@ -179,9 +179,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Property: Copy to clipboard
-  var clipboard = new Clipboard('.example-value');
+  var clipboard = new Clipboard('.tag,.example-clipboard');
 
-  Array.prototype.forEach.call(document.querySelectorAll('.example-value'), function($el) {
+  Array.prototype.forEach.call(document.querySelectorAll('.tag,.example-clipboard'), function($el) {
     $el.addEventListener('mouseenter', function(e) {
       e.target.classList.remove('is-copied');
     });

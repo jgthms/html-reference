@@ -9,12 +9,14 @@
 
 .menu-logo
   align-items: center
+  background: $orange
   display: flex
   justify-content: center
   figure
     align-items: center
     display: flex
     justify-content: center
+    visibility: hidden
     width: $logo-width
   img
     display: block
@@ -150,7 +152,6 @@
 
 .menu-hello
   background: #fff
-  min-height: 218px
 
 #huggingFace
   background: #fff
@@ -169,6 +170,7 @@
     position: relative
     &:before
       background: hsl(171, 100%, 81%)
+      background: $orange
       bottom: 0
       content: ""
       height: 2px
@@ -179,7 +181,7 @@
     margin-bottom: 0.5em
 
 #carbon
-  display: block
+  display: none
   font-size: 14px
   line-height: 1.2
   min-height: 218px
@@ -202,6 +204,35 @@
   &:hover
     .carbon-wrap a:last-child
       text-decoration: underline
+
+#placeholder
+  display: block
+  font-size: 14px
+  line-height: 1.2
+
+.placeholder-image
+  height: calc(100px + 1rem)
+  padding: 1rem 1rem 0
+  div
+    background: $background
+    height: 100px
+    width: 150px
+
+.placeholder-content
+  padding: 0.5rem 1rem 0
+  div
+    background: $background
+    height: 1em
+    margin-bottom: 0.2em
+    &:last-child
+      width: 30%
+
+.placeholder-footer
+  padding: 0.5rem 1rem 1rem
+  div
+    background: $background
+    height: 1em
+    width: 40%
 
 +mobile
   .menu-collections
