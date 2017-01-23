@@ -95,23 +95,27 @@
     -webkit-overflow-scrolling: touch
     flex-grow: 1
     overflow: auto
-  a
+  .menu-link
     display: block
     padding: 0.75rem 2rem
     transition: none
-    .highlight
-      background: $yellow
-      color: $yellow-invert
-    &:hover,
-    &.is-selected
-      background: $alpha
-      color: $alpha-invert
   &.is-searching
-    a
+    .menu-item
       display: none
       &.is-highlighted,
       &.is-selected,
         display: block
+
+.menu-item
+  .highlight
+    background: $yellow
+    color: $yellow-invert
+  &:hover,
+  &.is-selected
+    background: $alpha
+    color: $alpha-invert
+    .menu-item-name
+      color: $alpha-invert
 
 .menu-list-shadow
   display: block
@@ -274,21 +278,14 @@
     flex-shrink: 0
   .menu-collections
     font-size: 0.8rem
-    ul
-      display: flex
-      flex-wrap: wrap
-    p
-      .menu-collection-link
-        position: relative
-        right: 6px
+    padding-left: 1rem
   .menu-nav
     border-top: 1px solid $border
     display: flex
     flex-grow: 1
     flex-shrink: 1
-  .menu-list
-    a
-      padding: 0.25rem 1rem
+  .menu-list .menu-link
+    padding: 0.25rem 1rem
   .menu-hello
     background: #fff
     flex-grow: 0

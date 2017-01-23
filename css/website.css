@@ -394,20 +394,24 @@ html ::selection {
     -webkit-overflow-scrolling: touch;
     flex-grow: 1;
     overflow: auto; }
-  .menu-list a {
+  .menu-list .menu-link {
     display: block;
     padding: 0.75rem 2rem;
     transition: none; }
-    .menu-list a .highlight {
-      background: #ffdd57;
-      color: #310736; }
-    .menu-list a:hover, .menu-list a.is-selected {
-      background: #ff470f;
-      color: #fff; }
-  .menu-list.is-searching a {
+  .menu-list.is-searching .menu-item {
     display: none; }
-    .menu-list.is-searching a.is-highlighted, .menu-list.is-searching a.is-selected {
+    .menu-list.is-searching .menu-item.is-highlighted, .menu-list.is-searching .menu-item.is-selected {
       display: block; }
+
+.menu-item .highlight {
+  background: #ffdd57;
+  color: #310736; }
+
+.menu-item:hover, .menu-item.is-selected {
+  background: #ff470f;
+  color: #fff; }
+  .menu-item:hover .menu-item-name, .menu-item.is-selected .menu-item-name {
+    color: #fff; }
 
 .menu-list-shadow {
   display: block;
@@ -573,19 +577,14 @@ html ::selection {
     flex-grow: 0;
     flex-shrink: 0; }
   .menu-collections {
-    font-size: 0.8rem; }
-    .menu-collections ul {
-      display: flex;
-      flex-wrap: wrap; }
-    .menu-collections p .menu-collection-link {
-      position: relative;
-      right: 6px; }
+    font-size: 0.8rem;
+    padding-left: 1rem; }
   .menu-nav {
     border-top: 1px solid #e6e6e6;
     display: flex;
     flex-grow: 1;
     flex-shrink: 1; }
-  .menu-list a {
+  .menu-list .menu-link {
     padding: 0.25rem 1rem; }
   .menu-hello {
     background: #fff;
@@ -995,7 +994,6 @@ html ::selection {
       transform: translateX(4px) translateY(50%); }
 
 .value-header {
-  overflow: auto;
   padding-left: 1rem; }
 
 .value-name {
@@ -1033,6 +1031,9 @@ html ::selection {
 
 .value-preview {
   font-size: 14px; }
+
+.value-output a {
+  text-decoration: underline; }
 
 @media (max-width: 799px) {
   .attribute {
@@ -1176,6 +1177,8 @@ html ::selection {
   background: #fff;
   font-size: 14px;
   padding: 1rem; }
+  .example-output a {
+    text-decoration: underline; }
 
 @media (max-width: 799px) {
   .example {

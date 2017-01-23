@@ -2,10 +2,18 @@ document.addEventListener('DOMContentLoaded', function() {
   var $root = document.documentElement;
   var template = $root.dataset.template;
 
+  // Load iframes
+  var $footerIframes = document.querySelectorAll('.footer-iframe');
+
+  Array.prototype.forEach.call($footerIframes, function($iframe) {
+    var src = $iframe.dataset.src;
+    $iframe.src = src;
+  });
+
   // Menu: Search
   var $searchInput = document.getElementById('menu-search-input');
   var $menuList = document.getElementById('menu-list');
-  var $menuItems = document.querySelectorAll('#menu-list li a');
+  var $menuItems = document.querySelectorAll('.menu-item');
   var isFocused = false;
   var isSearching = false;
   var isModaling = false;
@@ -13,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var matches = initializeMatches($menuItems);
 
   $searchInput.addEventListener('focus', function(event) {
+    isFocused = true;
     isSearching = true;
   });
 
@@ -35,20 +44,22 @@ document.addEventListener('DOMContentLoaded', function() {
         currentMatch = -1;
         $menuList.classList.add('is-searching');
         Array.prototype.forEach.call($menuItems, function($el, index) {
-          var propertyName = $el.dataset.propertyName;
-          var isMatch = highlightQuery($el, propertyName, query);
+          var elementName = $el.dataset.elementName;
+          console.log('elementName', elementName);
+          var isMatch = highlightQuery($el, elementName, query);
 
           if (isMatch) {
             matches.push({
               DOMIndex: index,
-              propertyName: propertyName,
+              elementName: elementName,
             });
           }
         });
       } else {
         $menuList.classList.remove('is-searching');
         Array.prototype.forEach.call($menuItems, function($el) {
-          $el.innerHTML = $el.dataset.propertyName;
+          var $elName = $el.querySelector('.menu-item-name');
+          $elName.innerHTML = $el.dataset.elementName;
         });
       }
     }
@@ -67,17 +78,14 @@ document.addEventListener('DOMContentLoaded', function() {
     switch (key) {
     case 'Enter':
       if (isSearching && currentMatch > -1) {
-        var propertyName = matches[currentMatch].propertyName;
+        event.preventDefault();
+        var elementName = matches[currentMatch].elementName;
+        var $target = document.getElementById(elementName);
 
-        if (template === 'index') {
-          event.preventDefault();
-          var $target = document.getElementById(propertyName);
-
-          if ($target) {
-            $target.scrollIntoView();
-          }
+        if ($target) {
+          $target.scrollIntoView();
         } else {
-          window.location = window.location.origin + '/#' + propertyName;
+          window.location = window.location.origin + '/element/' + elementName;
         }
       }
       break;
@@ -178,10 +186,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Property: Copy to clipboard
-  var clipboard = new Clipboard('.tag,.example-clipboard');
+  // Element: Copy to clipboard
+  var clipboard = new Clipboard('.example-value');
 
-  Array.prototype.forEach.call(document.querySelectorAll('.tag,.example-clipboard'), function($el) {
+  Array.prototype.forEach.call(document.querySelectorAll('.example-value'), function($el) {
     $el.addEventListener('mouseenter', function(e) {
       e.target.classList.remove('is-copied');
     });
@@ -192,22 +200,22 @@ document.addEventListener('DOMContentLoaded', function() {
     e.trigger.classList.add('is-copied');
   });
 
-  // Property: Share modal
-  var $propertyShares = document.querySelectorAll('.property-share');
+  // Element: Share modal
+  var $elementShares = document.querySelectorAll('.element-share');
   var $modalInput = document.getElementById('modal-input');
   var baseURL = '' + window.location.origin + window.location.pathname;
-  baseURL = 'http://htmlreference.io/';
-  var facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fhtmlreference.io';
-  var twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fhtmlreference.io&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
+  baseURL = 'http://cssreference.io/';
+  var facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fcssreference.io';
+  var twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fcssreference.io&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
 
-  Array.prototype.forEach.call($propertyShares, function($el, index) {
+  Array.prototype.forEach.call($elementShares, function($el, index) {
     $el.addEventListener('click', function(e) {
-      var propertyName = $el.dataset.propertyName;
-      var shareURL = baseURL + '#' + propertyName;
+      var elementName = $el.dataset.elementName;
+      var shareURL = baseURL + 'element/' + elementName;
       $modalInput.value = shareURL;
       encodedURL = encodeURIComponent(shareURL);
       facebookURL = 'https://www.facebook.com/sharer.php?u=' + encodedURL;
-      twitterURL = buildTwitterURL(encodedURL, propertyName);
+      twitterURL = buildTwitterURL(encodedURL, elementName);
       openModal();
     });
   });
@@ -251,8 +259,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeModal() {
     isModaling = false;
     $modalShare.classList.remove('is-active');
-    facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fhtmlreference.io';
-    twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fhtmlreference.io&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
+    facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fcssreference.io';
+    twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fcssreference.io&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
   }
 
   var modalClipboard = new Clipboard('#modal-copy');
@@ -263,12 +271,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() { e.trigger.innerHTML = 'Copy'; }, 500);
   });
 
-  // Property: Launch animations
-  var $launchButtons = document.querySelectorAll('.property-animation-toggle');
+  // Element: Launch animations
+  var $launchButtons = document.querySelectorAll('.element-animation-toggle');
 
   Array.prototype.forEach.call($launchButtons, function($launchButton, index) {
-    var propertyName = $launchButton.dataset.propertyName;
-    var $targets = document.querySelectorAll('#' + propertyName + ' .example-output-div');
+    var elementName = $launchButton.dataset.elementName;
+    var $targets = document.querySelectorAll('#' + elementName + ' .example-output-div');
 
     $launchButton.addEventListener('click', function(event) {
       this.classList.toggle('is-playing');
@@ -279,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Property: Enable fixed
+  // Element: Enable fixed
   var $fixedButtons = document.querySelectorAll('.example-fixed-toggle');
 
   Array.prototype.forEach.call($fixedButtons, function($fixedButton, index) {
@@ -291,6 +299,24 @@ document.addEventListener('DOMContentLoaded', function() {
       $target.classList.toggle('is-fixed');
     });
   });
+
+  // Hashes
+  var $hashes = document.querySelectorAll('.hash, .menu-list-ul li a');
+
+  Array.prototype.forEach.call($hashes, function($el) {
+    $el.addEventListener('click', function(event) {
+      event.preventDefault();
+      var elementName = $el.dataset.elementName;
+      var $target = document.getElementById($el.dataset.elementName);
+
+      if ($target) {
+        $target.scrollIntoView();
+        history.replaceState('', document.title, '#' + elementName);
+      } else {
+        window.location = window.location.origin + '/element/' + elementName;
+      }
+    });
+  });
 });
 
 // Pure functions
@@ -298,10 +324,10 @@ function initializeMatches($menuItems) {
   var matches = [];
 
   Array.prototype.forEach.call($menuItems, function($el, index) {
-    var propertyName = $el.dataset.propertyName;
+    var elementName = $el.dataset.elementName;
     matches.push({
       DOMIndex: index,
-      propertyName: propertyName,
+      elementName: elementName,
     });
   });
 
@@ -310,8 +336,9 @@ function initializeMatches($menuItems) {
 
 function cleanMenu($menuItems, highlight, selection) {
   Array.prototype.forEach.call($menuItems, function($el, index) {
+    var $elName = $el.querySelector('.menu-item-name');
     if (highlight) {
-      $el.innerHTML = $el.dataset.propertyName;
+      $elName.innerHTML = $el.dataset.elementName;
       $el.classList.remove('is-highlighted');
     }
     if (selection) {
@@ -340,18 +367,19 @@ function navigateMenu($menuItems, matches, currentIndex, increment = true) {
   return actualIndex;
 }
 
-function highlightQuery($el, propertyName, query) {
-  var queryIndex = propertyName.indexOf(query);
+function highlightQuery($el, elementName, query) {
+  var queryIndex = elementName.indexOf(query);
+  var $elName = $el.querySelector('.menu-item-name');
 
   if (queryIndex >= 0) {
-    var before = propertyName.substring(0, queryIndex);
-    var highlight = '<span class="highlight">' + propertyName.substring(queryIndex, queryIndex + query.length) + '</span>';
-    var after = propertyName.substring(queryIndex + query.length);
-    $el.innerHTML = before + highlight + after;
+    var before = elementName.substring(0, queryIndex);
+    var highlight = '<span class="highlight">' + elementName.substring(queryIndex, queryIndex + query.length) + '</span>';
+    var after = elementName.substring(queryIndex + query.length);
+    $elName.innerHTML = before + highlight + after;
     $el.classList.add('is-highlighted');
     return true;
   } else {
-    $el.innerHTML = propertyName;
+    $elName.innerHTML = elementName;
     $el.classList.remove('is-highlighted');
     return false;
   }
@@ -361,8 +389,8 @@ function limitNumber(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
-function buildTwitterURL(encodedURL, propertyName) {
-  var text = 'Here\'s how ' + propertyName + ' works in #CSS';
+function buildTwitterURL(encodedURL, elementName) {
+  var text = 'Here\'s how ' + elementName + ' works in #CSS';
   var encodedText = encodeURIComponent(text);
   return 'https://twitter.com/intent/tweet?url=' + encodedURL + '&text=' + encodedText;
 }

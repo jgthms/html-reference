@@ -13,5 +13,6 @@ test.sass
 .sass-cache
 _gh_pages
 _site
+_includes/_static
 images/trash
 node_modules
