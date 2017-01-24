@@ -22,7 +22,7 @@
   overflow: auto
   padding: 1rem
   pre
-    font-size: 14px
+    font-size: 12px
     padding: 0
 
 .example-output
@@ -31,6 +31,28 @@
   padding: 1rem
   a
     text-decoration: underline
+  h1, h2, h3, h4, h5, h6
+    font-weight: bold
+    line-height: 1.2
+    margin: 1em 0 0.5em
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+  h1
+    font-size: 1.6em
+  h2
+    font-size: 1.4em
+  h3
+    font-size: 1.2em
+  p
+    margin: 0.5em 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+  main + aside
+    margin-top: 1em
 
 +mobile
   .example
@@ -39,3 +61,13 @@
 +desktop
   .example
     padding: 0 3rem
+  .example-preview
+    display: flex
+  .example-output
+    flex-basis: 0
+    flex-grow: 1
+    flex-shrink: 1
+  .example-code
+    flex-basis: 0
+    flex-grow: 2
+    flex-shrink: 2

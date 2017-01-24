@@ -85,6 +85,7 @@ th {
   content: attr(data-tooltip);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 0.6rem;
+  font-weight: 400;
   left: 50%;
   line-height: 1.2;
   opacity: 0;
@@ -797,7 +798,7 @@ html ::selection {
 
 .list {
   background: #fff;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   position: relative; }
 
 .tag {
@@ -989,7 +990,8 @@ html ::selection {
       opacity: 0.5;
       pointer-events: none;
       position: absolute;
-      right: 100%; }
+      right: 100%;
+      top: 0; }
     .value-name .tag:hover:before {
       transform: translateX(4px) translateY(50%); }
 
@@ -1131,6 +1133,15 @@ html ::selection {
       .element-name a:hover span {
         color: #3273dc; }
 
+.element-description code {
+  background: #f2f2f2;
+  border-radius: 2px;
+  color: #333333;
+  font-size: 0.9em;
+  padding: 1px 5px 3px;
+  position: relative;
+  top: -1px; }
+
 @media (max-width: 799px) {
   .element-header {
     padding-left: 2rem;
@@ -1170,7 +1181,7 @@ html ::selection {
   overflow: auto;
   padding: 1rem; }
   .example-code pre {
-    font-size: 14px;
+    font-size: 12px;
     padding: 0; }
 
 .example-output {
@@ -1179,6 +1190,28 @@ html ::selection {
   padding: 1rem; }
   .example-output a {
     text-decoration: underline; }
+  .example-output h1, .example-output h2, .example-output h3, .example-output h4, .example-output h5, .example-output h6 {
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 1em 0 0.5em; }
+    .example-output h1:first-child, .example-output h2:first-child, .example-output h3:first-child, .example-output h4:first-child, .example-output h5:first-child, .example-output h6:first-child {
+      margin-top: 0; }
+    .example-output h1:last-child, .example-output h2:last-child, .example-output h3:last-child, .example-output h4:last-child, .example-output h5:last-child, .example-output h6:last-child {
+      margin-bottom: 0; }
+  .example-output h1 {
+    font-size: 1.6em; }
+  .example-output h2 {
+    font-size: 1.4em; }
+  .example-output h3 {
+    font-size: 1.2em; }
+  .example-output p {
+    margin: 0.5em 0; }
+    .example-output p:first-child {
+      margin-top: 0; }
+    .example-output p:last-child {
+      margin-bottom: 0; }
+  .example-output main + aside {
+    margin-top: 1em; }
 
 @media (max-width: 799px) {
   .example {
@@ -1186,7 +1219,17 @@ html ::selection {
 
 @media (min-width: 800px) {
   .example {
-    padding: 0 3rem; } }
+    padding: 0 3rem; }
+  .example-preview {
+    display: flex; }
+  .example-output {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1; }
+  .example-code {
+    flex-basis: 0;
+    flex-grow: 2;
+    flex-shrink: 2; } }
 
 .modal {
   z-index: 50; }
