@@ -14,23 +14,31 @@
     color: $blue-invert
     padding: 2px 6px
 
-.example-preview
-  border: 1px solid $yellow
-
 .example-code
-  background: $background
+  background: #222
   overflow: auto
   padding: 1rem
   pre
-    font-size: 12px
+    font-size: 13px
     padding: 0
 
 .example-output
   background: #fff
+  border-color: $yellow
+  border-style: solid
+  border-width: 1px 1px 0
+  color: $text-strong
   font-size: 14px
   padding: 1rem
   a
     text-decoration: underline
+  code
+    background: $background
+    border-radius: 2px
+    padding: 0 4px 2px
+    position: relative
+    top: -1px
+    vertical-align: baseline
   h1, h2, h3, h4, h5, h6
     font-weight: bold
     line-height: 1.2
@@ -40,11 +48,17 @@
     &:last-child
       margin-bottom: 0
   h1
-    font-size: 1.6em
+    font-size: 2em
   h2
-    font-size: 1.4em
+    font-size: 1.6em
   h3
+    font-size: 1.4em
+  h4
     font-size: 1.2em
+  h5
+    font-size: 1.1em
+  h6
+    font-size: 1em
   p
     margin: 0.5em 0
     &:first-child
@@ -53,6 +67,14 @@
       margin-bottom: 0
   main + aside
     margin-top: 1em
+  table
+    td
+      border: 1px solid $border
+      padding: 0.5em
+  fieldset
+    padding: 0.5em 1em 1em
+  iframe
+    border: inset 2px $border
 
 +mobile
   .example
@@ -64,6 +86,7 @@
   .example-preview
     display: flex
   .example-output
+    border-width: 1px 0 1px 1px
     flex-basis: 0
     flex-grow: 1
     flex-shrink: 1

@@ -4,6 +4,11 @@
       background: $red
       color: $red-invert
 
+.attribute--novalue
+  .attribute-name
+    .tag
+      background: $purple-light
+
 .attribute-name
   .tag
     background: lavender
@@ -14,10 +19,16 @@
   color: $red
   font-size: 0.8em
 
+.attribute-is-novalue
+  color: $purple
+  font-size: 0.8em
+
 .attribute-description
   font-size: 0.8em
   line-height: 1.4
   margin-top: 0.5em
+  a:hover
+    text-decoration: underline
 
 .value-name
   position: relative
@@ -52,6 +63,8 @@
   color: $text-light
   font-size: 0.7em
   line-height: 1.2
+  a:hover
+    text-decoration: underline
   strong
     color: inherit
   p,
@@ -83,6 +96,10 @@
 .value-output
   a
     text-decoration: underline
+  fieldset
+    padding: 0.5em 1em 1em
+  iframe
+    border: inset 2px $border
 
 +mobile
   .attribute
@@ -107,6 +124,7 @@
   .attribute-values
     flex-grow: 1
     flex-shrink: 1
+    width: 80%
   .value
     display: flex
   .value + .value
@@ -119,5 +137,11 @@
     padding-right: 2rem
   .value-preview
     flex-shrink: 0
-    width: 33%
-
+    width: 30%
+  .attribute--novalue
+    .attribute-header
+      width: 76%
+    .value-header
+      display: none
+    .value-preview
+      width: 100%

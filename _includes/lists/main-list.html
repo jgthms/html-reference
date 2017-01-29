@@ -1,4 +1,4 @@
-<section id="audio" class="element">
+<section id="img" class="element">
   <header class="element-header">
     <nav class="element-links">
       <span>
@@ -7,22 +7,56 @@
             No
         </strong>
       </span>
-      <a class="element-links-direct" href="{{site.url}}/element/audio/" data-element-name="audio" data-tooltip="Single page for this element">Permalink</a>
-      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="audio">Share</a>
-      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/audio" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+      <a class="element-links-direct" href="{{site.url}}/element/img/" data-element-name="img" data-tooltip="Single page for this element">Permalink</a>
+      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="img">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/img" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
     </nav>
     <h2 class="element-name">
-      <a href="{{site.url}}/#audio">
+      <a href="{{site.url}}/#img">
         <span>#</span>
-        audio
+        img
       </a>
     </h2>
     <div class="element-description">
-      <p>Allows to embed an audio clip into a web page.</p>
+      <p>Defines an <strong>image</strong> inserted in the web page.</p>
 
     </div>
   </header>
 
+    <div class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#img-example-0">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><img src="/images/sunset.jpg" alt="Picture of a Ha Long Bay sunset"></div>
+        <div id="img-example-0" class="example-code">{% highlight html %}<img src="/images/sunset.jpg" alt="Picture of a Ha Long Bay sunset">{% endhighlight %}</div>
+      </article>
+    </div>
+    <div class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#img-example-1">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><!-- For responsive images, use srcset and sizes -->
+
+<img src="/images/sunset-360.jpg"
+  alt="Picture of a Ha Long Bay sunset"
+  srcset="/images/sunset-360.jpg 360w,
+          /images/sunset-720.jpg 720w,
+          /images/sunset-1440.jpg 1440w>"
+  sizes="(min-width: 800px) 720px, 360px"></div>
+        <div id="img-example-1" class="example-code">{% highlight html %}<!-- For responsive images, use srcset and sizes -->
+
+<img src="/images/sunset-360.jpg"
+  alt="Picture of a Ha Long Bay sunset"
+  srcset="/images/sunset-360.jpg 360w,
+          /images/sunset-720.jpg 720w,
+          /images/sunset-1440.jpg 1440w>"
+  sizes="(min-width: 800px) 720px, 360px">{% endhighlight %}</div>
+      </article>
+    </div>
 
     <article class="attribute attribute--required">
       <header class="attribute-header">
@@ -32,36 +66,208 @@
           </code>
         </h3>
         <div class="attribute-description">
-          <p>HelloWorld</p>
+          <p>The URL where the image is hosted.</p>
 
             <strong class="attribute-is-required">Required.</strong>
         </div>
       </header>
 
       <div class="attribute-values">
+          <article class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy src=&quot;/images/tiramisu.jpg&quot;" data-clipboard-text="src=&quot;/images/tiramisu.jpg&quot;">
+                    "/images/tiramisu.jpg"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use a <strong>relative</strong> URL.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output">
+                    <img  src="/images/tiramisu.jpg">
+                        
+                    </img>
+              </div>
+            </aside>
+          </article>
+          <article class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy src=&quot;{{site.url}}/images/traffic.jpg&quot;" data-clipboard-text="src=&quot;{{site.url}}/images/traffic.jpg&quot;">
+                    "{{site.url}}/images/traffic.jpg"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use an <strong>absolute</strong> URL.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output">
+                    <img  src="{{site.url}}/images/traffic.jpg">
+                        
+                    </img>
+              </div>
+            </aside>
+          </article>
       </div>
     </article>
-    <article class="attribute">
+    <article class="attribute attribute--required">
       <header class="attribute-header">
         <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="autoplay">
-            autoplay
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="alt">
+            alt
           </code>
         </h3>
         <div class="attribute-description">
-          <p>HelloWorld</p>
+          <p>Alternative text to describe the image if it&#39;s not available. Used by screen readers.</p>
 
+            <strong class="attribute-is-required">Required.</strong>
         </div>
       </header>
 
       <div class="attribute-values">
+          <article class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy alt=&quot;Picture of a man standing in front of the Dragon&#x27;s Pearl boat&quot;" data-clipboard-text="alt=&quot;Picture of a man standing in front of the Dragon&#x27;s Pearl boat&quot;">
+                    "Picture of a man standing in front of the Dragon&#x27;s Pearl boat"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>Describe the image as if it was not present.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output">
+                    <img  src="/images/boat.jpg" alt="Picture of a man standing in front of the Dragon's Pearl boat">
+                        
+                    </img>
+              </div>
+            </aside>
+          </article>
       </div>
     </article>
     <article class="attribute">
       <header class="attribute-header">
         <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="buffered">
-            buffered
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="srcset">
+            srcset
+          </code>
+        </h3>
+        <div class="attribute-description">
+          
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article class="value">
+            <header class="value-header">
+              <div class="value-description">
+                
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output">
+                    <img  srcset>
+                        
+                    </img>
+              </div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="sizes">
+            sizes
+          </code>
+        </h3>
+        <div class="attribute-description">
+          
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article class="value">
+            <header class="value-header">
+              <div class="value-description">
+                
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output">
+                    <img  sizes>
+                        
+                    </img>
+              </div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="crossorigin">
+            crossorigin
+          </code>
+        </h3>
+        <div class="attribute-description">
+          
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy crossorigin=&quot;anonymous&quot;" data-clipboard-text="crossorigin=&quot;anonymous&quot;">
+                    "anonymous"
+                  </code>
+                </h4>
+              <div class="value-description">
+                
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output">
+                    <img  crossorigin="anonymous">
+                        
+                    </img>
+              </div>
+            </aside>
+          </article>
+          <article class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy crossorigin=&quot;use-credentials&quot;" data-clipboard-text="crossorigin=&quot;use-credentials&quot;">
+                    "use-credentials"
+                  </code>
+                </h4>
+              <div class="value-description">
+                
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output">
+                    <img  crossorigin="use-credentials">
+                        
+                    </img>
+              </div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="height">
+            height
           </code>
         </h3>
         <div class="attribute-description">
@@ -75,83 +281,8 @@
     <article class="attribute">
       <header class="attribute-header">
         <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="controls">
-            controls
-          </code>
-        </h3>
-        <div class="attribute-description">
-          
-        </div>
-      </header>
-
-      <div class="attribute-values">
-      </div>
-    </article>
-    <article class="attribute">
-      <header class="attribute-header">
-        <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="loop">
-            loop
-          </code>
-        </h3>
-        <div class="attribute-description">
-          
-        </div>
-      </header>
-
-      <div class="attribute-values">
-      </div>
-    </article>
-    <article class="attribute">
-      <header class="attribute-header">
-        <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="muted">
-            muted
-          </code>
-        </h3>
-        <div class="attribute-description">
-          
-        </div>
-      </header>
-
-      <div class="attribute-values">
-      </div>
-    </article>
-    <article class="attribute">
-      <header class="attribute-header">
-        <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="played">
-            played
-          </code>
-        </h3>
-        <div class="attribute-description">
-          
-        </div>
-      </header>
-
-      <div class="attribute-values">
-      </div>
-    </article>
-    <article class="attribute">
-      <header class="attribute-header">
-        <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="preload">
-            preload
-          </code>
-        </h3>
-        <div class="attribute-description">
-          
-        </div>
-      </header>
-
-      <div class="attribute-values">
-      </div>
-    </article>
-    <article class="attribute">
-      <header class="attribute-header">
-        <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="volume">
-            volume
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="width">
+            width
           </code>
         </h3>
         <div class="attribute-description">
