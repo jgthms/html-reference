@@ -1,0 +1,68 @@
+---
+layout: single
+elementName: picture
+---
+
+<section id="picture" class="element element--experimental">
+  <header class="element-header">
+    <nav class="element-links">
+        <span>
+          Type: <strong>block</strong>
+        </span>
+      <span>
+        Self-closing:
+        <strong>
+            No
+        </strong>
+      </span>
+      <a class="element-links-direct" href="{{site.url}}/element/picture/" data-element-name="picture" data-tooltip="Single page for this element">Permalink</a>
+      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="picture">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/picture" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="element-name">
+      <a href="{{site.url}}/#picture">
+        <span>#</span>
+        picture
+      </a>
+        <span class="tag tag--experimental">Experimental</span>
+    </h2>
+    <div class="element-description">
+      <p>Defines a container for <strong>sources</strong> of an <code>&lt;img&gt;</code> element.</p>
+
+    </div>
+  </header>
+
+    <div id="picture-example-0" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#picture-example-0-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><picture>
+ <source
+  media="(min-width: 800px)"
+  srcset="/images/sunset-360.jpg 360w,
+          /images/sunset-720.jpg 720w,
+          /images/sunset-1440.jpg 1440w"
+  sizes="33.3vw">
+ <source
+  srcset="/images/sunset-720.jpg 2x,
+          /images/sunset-360.jpg 1x">
+ <img src="/images/sunset.jpg" alt="Picture of a Ha Long Bay sunset">
+</picture></div>
+        <div id="picture-example-0-code" class="example-code">{% highlight html %}<picture>
+ <source
+  media="(min-width: 800px)"
+  srcset="/images/sunset-360.jpg 360w,
+          /images/sunset-720.jpg 720w,
+          /images/sunset-1440.jpg 1440w"
+  sizes="33.3vw">
+ <source
+  srcset="/images/sunset-720.jpg 2x,
+          /images/sunset-360.jpg 1x">
+ <img src="/images/sunset.jpg" alt="Picture of a Ha Long Bay sunset">
+</picture>{% endhighlight %}</div>
+      </article>
+    </div>
+
+</section>

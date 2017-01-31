@@ -1,0 +1,287 @@
+---
+layout: single
+elementName: meter
+---
+
+<section id="meter" class="element">
+  <header class="element-header">
+    <nav class="element-links">
+      <span>
+        Self-closing:
+        <strong>
+            No
+        </strong>
+      </span>
+      <a class="element-links-direct" href="{{site.url}}/element/meter/" data-element-name="meter" data-tooltip="Single page for this element">Permalink</a>
+      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="meter">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/meter" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="element-name">
+      <a href="{{site.url}}/#meter">
+        <span>#</span>
+        meter
+      </a>
+    </h2>
+    <div class="element-description">
+      <p>Defines a <strong>horizontal meter</strong>.</p>
+
+    </div>
+  </header>
+
+    <div id="meter-example-0" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#meter-example-0-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><meter value="0.7">Progress</meter></div>
+        <div id="meter-example-0-code" class="example-code">{% highlight html %}<meter value="0.7">Progress</meter>{% endhighlight %}</div>
+      </article>
+    </div>
+    <div id="meter-example-1" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#meter-example-1-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><meter min="0" low="16" value="71" high="92" max="100">Alex</meter><br>
+<meter min="0" low="16" value="16" high="92" max="100">Brandon</meter><br>
+<meter min="0" low="16" value="40" high="92" max="100">Charlotte</meter><br>
+<meter min="0" low="16" value="92" high="92" max="100">Sam</meter>
+</div>
+        <div id="meter-example-1-code" class="example-code">{% highlight html %}<meter min="0" low="16" value="71" high="92" max="100">Alex</meter><br>
+<meter min="0" low="16" value="16" high="92" max="100">Brandon</meter><br>
+<meter min="0" low="16" value="40" high="92" max="100">Charlotte</meter><br>
+<meter min="0" low="16" value="92" high="92" max="100">Sam</meter>
+{% endhighlight %}</div>
+      </article>
+    </div>
+
+    <article id="meter-value" class="attribute attribute--required">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="value">
+            value
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines the value of the meter, on the scale defined by the <code>max</code> attribute.</p>
+
+            <strong class="attribute-is-required">Required.</strong>
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="meter-value-07" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy value=&quot;0.7&quot;" data-clipboard-text="value=&quot;0.7&quot;">
+                      "0.7"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use <strong>decimal</strong> and <strong>negative</strong> numbers. It must be between the <code>min</code> and <code>max</code> values.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><meter  value="0.7"></meter></div>
+            </aside>
+          </article>
+          <article id="meter-value-42" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy value=&quot;-42&quot;" data-clipboard-text="value=&quot;-42&quot;">
+                      "-42"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>If you use a value that is lower than the minimum, the meter will be empty.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><meter  value="-42"></meter></div>
+            </aside>
+          </article>
+          <article id="meter-value-63" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy value=&quot;63&quot;" data-clipboard-text="value=&quot;63&quot;">
+                      "63"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>If you use a value that is higher than the maximum, the meter will be full.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><meter  value="63"></meter></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="meter-max" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="max">
+            max
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines the maximum value possible on the meter.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="meter-max-1" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy max=&quot;1&quot;" data-clipboard-text="max=&quot;1&quot;">
+                      "1"
+                  </code>
+                </h4>
+              <div class="value-description">
+                  <strong class="value-is-default">Default.</strong>
+                <p>You can use <strong>decimal</strong> and <strong>negative</strong> numbers.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><meter  value="0.7" max="1"></meter></div>
+            </aside>
+          </article>
+          <article id="meter-max-100" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy max=&quot;100&quot;" data-clipboard-text="max=&quot;100&quot;">
+                      "100"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use <strong>decimal</strong> and <strong>negative</strong> numbers.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><meter  value="40" max="100"></meter></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="meter-min" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="min">
+            min
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines the minimum value possible on the meter.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="meter-min-0" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy min=&quot;0&quot;" data-clipboard-text="min=&quot;0&quot;">
+                      "0"
+                  </code>
+                </h4>
+              <div class="value-description">
+                  <strong class="value-is-default">Default.</strong>
+                <p>You can use <strong>decimal</strong> and <strong>negative</strong> numbers.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><meter  min="0"></meter></div>
+            </aside>
+          </article>
+          <article id="meter-min-150" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy min=&quot;-150&quot;" data-clipboard-text="min=&quot;-150&quot;">
+                      "-150"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use <strong>decimal</strong> and <strong>negative</strong> numbers.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><meter  min="-150"></meter></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="meter-low" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="low">
+            low
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines the lowest value across the range defined by the meter.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="meter-low-016" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy low=&quot;0.16&quot;" data-clipboard-text="low=&quot;0.16&quot;">
+                      "0.16"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>The value must be higher than <code>min</code> and lower than <code>high</code>.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><meter  low="0.16"></meter></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="meter-high" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="high">
+            high
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines the highest value across the range defined by the meter.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="meter-high-092" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy high=&quot;0.92&quot;" data-clipboard-text="high=&quot;0.92&quot;">
+                      "0.92"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>The value must be lower than <code>max</code> and higher than <code>low</code>.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><meter  high="0.92"></meter></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+</section>

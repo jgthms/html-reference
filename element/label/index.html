@@ -1,0 +1,124 @@
+---
+layout: single
+elementName: label
+---
+
+<section id="label" class="element">
+  <header class="element-header">
+    <nav class="element-links">
+      <span>
+        Self-closing:
+        <strong>
+            No
+        </strong>
+      </span>
+      <a class="element-links-direct" href="{{site.url}}/element/label/" data-element-name="label" data-tooltip="Single page for this element">Permalink</a>
+      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="label">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/label" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="element-name">
+      <a href="{{site.url}}/#label">
+        <span>#</span>
+        label
+      </a>
+    </h2>
+    <div class="element-description">
+      <p>Defines a <strong>label</strong> for a form control.</p>
+
+    </div>
+  </header>
+
+    <div id="label-example-0" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#label-example-0-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><label for="first_name">First name</label>
+<br>
+<input type="text" name="first_name" id="first_name"></div>
+        <div id="label-example-0-code" class="example-code">{% highlight html %}<label for="first_name">First name</label>
+<br>
+<input type="text" name="first_name" id="first_name">{% endhighlight %}</div>
+      </article>
+    </div>
+    <div id="label-example-1" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#label-example-1-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><label>
+  <input type="checkbox" name="terms">
+  I agree to the terms
+</label></div>
+        <div id="label-example-1-code" class="example-code">{% highlight html %}<label>
+  <input type="checkbox" name="terms">
+  I agree to the terms
+</label>{% endhighlight %}</div>
+      </article>
+    </div>
+    <div id="label-example-2" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#label-example-2-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><p>Subscribe to the newsletter?</p>
+<label>
+  <input type="radio" name="newsletter" value="yes"> Yes
+</label>
+<label>
+  <input type="radio" name="newsletter" value="no"> No
+</label></div>
+        <div id="label-example-2-code" class="example-code">{% highlight html %}<p>Subscribe to the newsletter?</p>
+<label>
+  <input type="radio" name="newsletter" value="yes"> Yes
+</label>
+<label>
+  <input type="radio" name="newsletter" value="no"> No
+</label>{% endhighlight %}</div>
+      </article>
+    </div>
+
+    <article id="label-for" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="for">
+            for
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines <em>which</em> control the label is associated with.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="label-for-last_name" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy for=&quot;last_name&quot;" data-clipboard-text="for=&quot;last_name&quot;">
+                      "last_name"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>Clicking the label will focus on the input with the <code>id</code> equal to <code>last_name</code>.</p>
+
+{% highlight html %}
+<label for="last_name">Last name</label>
+<br>
+<input type="text" name="last_name" id="last_name">
+{% endhighlight %}
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><label for="last_name">Last name</label>
+<br>
+<input type="text" name="last_name" id="last_name"></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+</section>

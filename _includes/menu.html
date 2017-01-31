@@ -49,23 +49,24 @@ document.addEventListener('DOMContentLoaded', function() {
     </ul>
     <p><strong><a class="menu-collection-link" href="{{site.url}}/html-global-attributes/">Global attributes</a></strong></p>
   </nav>
-  <nav id="menu-nav" class="menu-nav">
-    <div class="menu-search">
-      <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search for an element">
-      <i class="icon is-search"></i>
-    </div>
-    <div id="menu-list" class="menu-list">
-      <ul id="menu-list-ul" class="menu-list-ul">
-        {% include lists/menu-list.html %}
-      </ul>
-      <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
-      <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
-    </div>
-    <a id="menu-nav-close" class="menu-close">
-      <i class="icon is-close"></i>
-      <strong>Close</strong>
-    </a>
-  </nav>
+  {% if page.route != "index" %}
+    <nav id="menu-nav" class="menu-nav">
+      <div class="menu-search">
+        <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search for an element">
+        <i class="icon is-search"></i>
+      </div>
+      <div id="menu-list" class="menu-list">
+        <ul id="menu-list-ul" class="menu-list-ul">
+        </ul>
+        <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
+        <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
+      </div>
+      <a id="menu-nav-close" class="menu-close">
+        <i class="icon is-close"></i>
+        <strong>Close</strong>
+      </a>
+    </nav>
+  {% endif %}
   <!--footer id="menuHello" class="menu-hello">
     <div id="huggingFace">
       <p>

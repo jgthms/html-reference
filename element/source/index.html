@@ -1,0 +1,242 @@
+---
+layout: single
+elementName: source
+---
+
+<section id="source" class="element">
+  <header class="element-header">
+    <nav class="element-links">
+      <span>
+        Self-closing:
+        <strong>
+            No
+        </strong>
+      </span>
+      <a class="element-links-direct" href="{{site.url}}/element/source/" data-element-name="source" data-tooltip="Single page for this element">Permalink</a>
+      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="source">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/source" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="element-name">
+      <a href="{{site.url}}/#source">
+        <span>#</span>
+        source
+      </a>
+    </h2>
+    <div class="element-description">
+      <p>Defines a <strong>source</strong> for an <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>, or <code>&lt;picture&gt;</code> element.</p>
+
+    </div>
+  </header>
+
+    <div id="source-example-0" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#source-example-0-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><picture>
+ <source
+  media="(min-width: 800px)"
+  srcset="/images/sunset-360.jpg 360w,
+          /images/sunset-720.jpg 720w,
+          /images/sunset-1440.jpg 1440w"
+  sizes="33.3vw">
+ <source
+  srcset="/images/sunset-720.jpg 2x,
+          /images/sunset-360.jpg 1x">
+ <img src="/images/sunset.jpg" alt="Picture of a Ha Long Bay sunset">
+</picture></div>
+        <div id="source-example-0-code" class="example-code">{% highlight html %}<picture>
+ <source
+  media="(min-width: 800px)"
+  srcset="/images/sunset-360.jpg 360w,
+          /images/sunset-720.jpg 720w,
+          /images/sunset-1440.jpg 1440w"
+  sizes="33.3vw">
+ <source
+  srcset="/images/sunset-720.jpg 2x,
+          /images/sunset-360.jpg 1x">
+ <img src="/images/sunset.jpg" alt="Picture of a Ha Long Bay sunset">
+</picture>{% endhighlight %}</div>
+      </article>
+    </div>
+
+    <article id="source-src" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="src">
+            src
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>The URL where the media is hosted.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="source-src-imagestiramisujpg" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy src=&quot;/images/tiramisu.jpg&quot;" data-clipboard-text="src=&quot;/images/tiramisu.jpg&quot;">
+                      "/images/tiramisu.jpg"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use a <strong>relative</strong> URL.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><source  src="/images/tiramisu.jpg"></source></div>
+            </aside>
+          </article>
+          <article id="source-src-siteurlimagestrafficjpg" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy src=&quot;{{site.url}}/images/traffic.jpg&quot;" data-clipboard-text="src=&quot;{{site.url}}/images/traffic.jpg&quot;">
+                      "{{site.url}}/images/traffic.jpg"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use an <strong>absolute</strong> URL.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><source  src="{{site.url}}/images/traffic.jpg"></source></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="source-srcset" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="srcset">
+            srcset
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines a list of <em>different</em> <strong>sources</strong> for the <em>same</em> media. The browser will choose the best one to use.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="source-srcset-imagessunset-360jpg-360w-imagessunset-720jpg-720w-imagessunset-1440jpg-1440w" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy srcset=&quot;/images/sunset-360.jpg 360w, /images/sunset-720.jpg 720w, /images/sunset-1440.jpg 1440w&quot;" data-clipboard-text="srcset=&quot;/images/sunset-360.jpg 360w, /images/sunset-720.jpg 720w, /images/sunset-1440.jpg 1440w&quot;">
+                      "/images/sunset-360.jpg 360w,<br> /images/sunset-720.jpg 720w,<br> /images/sunset-1440.jpg 1440w"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use a <strong>width descriptor</strong> like <code>360w</code>. This value is divided by one of the source sizes (defined in the <code>sizes</code> attribute) to obtain the <strong>pixel density</strong>.</p>
+<p>@html</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><source  srcset="/images/sunset-360.jpg 360w, /images/sunset-720.jpg 720w, /images/sunset-1440.jpg 1440w"></source></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="source-sizes" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="sizes">
+            sizes
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines a list of different source <strong>sizes</strong>. You can combine each of them with a <strong>media query</strong>.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="source-sizes-min-width-800px-1440px-720px" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy sizes=&quot;(min-width: 800px) 1440px, 720px&quot;" data-clipboard-text="sizes=&quot;(min-width: 800px) 1440px, 720px&quot;">
+                      "(min-width: 800px) 1440px, 720px"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>The browser will use the <code>1440px</code> image (defined in <code>srcset</code>) if the viewport is larger than 800px.<br>It will use the <code>720px</code> otherwise.</p>
+<p>@html</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><source  sizes="(min-width: 800px) 1440px, 720px"></source></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="source-type" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="type">
+            type
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines the <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">MIME type</a> of the source.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="source-type-imagejpg" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy type=&quot;image/jpg&quot;" data-clipboard-text="type=&quot;image/jpg&quot;">
+                      "image/jpg"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can only use audio, video, or picture MIME types.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><source  type="image/jpg"></source></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="source-media" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="media">
+            media
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines a media query for a <code>&lt;picture&gt;</code> source.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="source-media-min-width-800px" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy media=&quot;(min-width: 800px)&quot;" data-clipboard-text="media=&quot;(min-width: 800px)&quot;">
+                      "(min-width: 800px)"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>The media will only be used on viewports larger than 800px.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><source  media="(min-width: 800px)"></source></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+</section>

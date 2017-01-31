@@ -1,0 +1,244 @@
+---
+layout: single
+elementName: option
+---
+
+<section id="option" class="element">
+  <header class="element-header">
+    <nav class="element-links">
+      <span>
+        Self-closing:
+        <strong>
+            No
+        </strong>
+      </span>
+      <a class="element-links-direct" href="{{site.url}}/element/option/" data-element-name="option" data-tooltip="Single page for this element">Permalink</a>
+      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="option">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/option" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="element-name">
+      <a href="{{site.url}}/#option">
+        <span>#</span>
+        option
+      </a>
+    </h2>
+    <div class="element-description">
+      <p>Defines an <strong>option</strong> within a <code>&lt;select&gt;</code> dropdown.</p>
+
+    </div>
+  </header>
+
+    <div id="option-example-0" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#option-example-0-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><select name="country">
+  <option value="Argentina">Argentina</option>
+  <option value="Bolivia">Bolivia</option>
+  <option value="Brazil">Brazil</option>
+  <option value="Chile">Chile</option>
+  <option value="Colombia">Colombia</option>
+  <option value="Ecuador">Ecuador</option>
+  <option value="Guyana">Guyana</option>
+  <option value="Paraguay">Paraguay</option>
+  <option value="Peru">Peru</option>
+  <option value="Suriname">Suriname</option>
+  <option value="Uruguay">Uruguay</option>
+  <option value="Venezuela">Venezuela</option>
+</select></div>
+        <div id="option-example-0-code" class="example-code">{% highlight html %}<select name="country">
+  <option value="Argentina">Argentina</option>
+  <option value="Bolivia">Bolivia</option>
+  <option value="Brazil">Brazil</option>
+  <option value="Chile">Chile</option>
+  <option value="Colombia">Colombia</option>
+  <option value="Ecuador">Ecuador</option>
+  <option value="Guyana">Guyana</option>
+  <option value="Paraguay">Paraguay</option>
+  <option value="Peru">Peru</option>
+  <option value="Suriname">Suriname</option>
+  <option value="Uruguay">Uruguay</option>
+  <option value="Venezuela">Venezuela</option>
+</select>{% endhighlight %}</div>
+      </article>
+    </div>
+
+    <article id="option-value" class="attribute attribute--required">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="value">
+            value
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines the <code>&lt;select&gt;</code> value if this option is selected.</p>
+
+            <strong class="attribute-is-required">Required.</strong>
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="option-value-south-africa" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy value=&quot;south-africa&quot;" data-clipboard-text="value=&quot;south-africa&quot;">
+                      "south-africa"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>This value will be sent to the server when the form is submitted.</p>
+
+{% highlight html %}
+<select>
+  <option value="south-africa">South Africa</option>
+</select>
+{% endhighlight %}
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><select>
+  <option value="south-africa">South Africa</option>
+</select></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="option-label" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="label">
+            label
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines a label for the option.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="option-label-republic-of-south-africa" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy label=&quot;Republic of South Africa&quot;" data-clipboard-text="label=&quot;Republic of South Africa&quot;">
+                      "Republic of South Africa"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>The label will replace the option inner text.</p>
+
+{% highlight html %}
+<select>
+  <option value="south-africa" label="Republic of South Africa">South Africa</option>
+</select>
+{% endhighlight %}
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><select>
+  <option value="south-africa" label="Republic of South Africa">South Africa</option>
+</select></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="option-disabled" class="attribute attribute--novaluebut">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="disabled">
+            disabled
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Disables the option.</p>
+
+            <strong class="attribute-is-novalue">No value required.</strong>
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="option-disabled-undefined" class="value">
+            <header class="value-header">
+              <div class="value-description">
+                <p>The option remains visible but is not selectable anymore.</p>
+
+{% highlight html %}
+<select>
+  <option>Monday</option>
+  <option>Tuesday</option>
+  <option disabled>Wednesday</option>
+  <option disabled>Thursday</option>
+  <option>Friday</option>
+  <option>Saturday</option>
+  <option>Sunday</option>
+</select>
+{% endhighlight %}
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><select>
+  <option>Monday</option>
+  <option>Tuesday</option>
+  <option disabled>Wednesday</option>
+  <option disabled>Thursday</option>
+  <option>Friday</option>
+  <option>Saturday</option>
+  <option>Sunday</option>
+</select></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="option-selected" class="attribute attribute--novaluebut">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="selected">
+            selected
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Selects the option when the web page loads.</p>
+
+            <strong class="attribute-is-novalue">No value required.</strong>
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="option-selected-undefined" class="value">
+            <header class="value-header">
+              <div class="value-description">
+                
+{% highlight html %}
+<select>
+  <option>Monday</option>
+  <option>Tuesday</option>
+  <option>Wednesday</option>
+  <option>Thursday</option>
+  <option selected>Friday</option>
+  <option>Saturday</option>
+  <option>Sunday</option>
+</select>
+{% endhighlight %}
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><select>
+  <option>Monday</option>
+  <option>Tuesday</option>
+  <option>Wednesday</option>
+  <option>Thursday</option>
+  <option selected>Friday</option>
+  <option>Saturday</option>
+  <option>Sunday</option>
+</select></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+</section>

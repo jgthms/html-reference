@@ -1,0 +1,174 @@
+---
+layout: single
+elementName: progress
+---
+
+<section id="progress" class="element">
+  <header class="element-header">
+    <nav class="element-links">
+      <span>
+        Self-closing:
+        <strong>
+            No
+        </strong>
+      </span>
+      <a class="element-links-direct" href="{{site.url}}/element/progress/" data-element-name="progress" data-tooltip="Single page for this element">Permalink</a>
+      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="progress">Share</a>
+      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/progress" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+    </nav>
+    <h2 class="element-name">
+      <a href="{{site.url}}/#progress">
+        <span>#</span>
+        progress
+      </a>
+    </h2>
+    <div class="element-description">
+      <p>Defines a <strong>progress bar</strong>.</p>
+
+    </div>
+  </header>
+
+    <div id="progress-example-0" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#progress-example-0-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><progress value="0.7">Progress</progress></div>
+        <div id="progress-example-0-code" class="example-code">{% highlight html %}<progress value="0.7">Progress</progress>{% endhighlight %}</div>
+      </article>
+    </div>
+    <div id="progress-example-1" class="example">
+      <p class="example-label">
+        <strong>Example:</strong>
+        <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#progress-example-1-code">Copy</a>
+      </p>
+      <article class="example-preview">
+          <div class="example-output"><progress value="71" max="100">Alex</progress><br>
+<progress value="16" max="100">Brandon</progress><br>
+<progress value="40" max="100">Charlotte</progress><br>
+<progress value="92" max="100">Sam</progress>
+</div>
+        <div id="progress-example-1-code" class="example-code">{% highlight html %}<progress value="71" max="100">Alex</progress><br>
+<progress value="16" max="100">Brandon</progress><br>
+<progress value="40" max="100">Charlotte</progress><br>
+<progress value="92" max="100">Sam</progress>
+{% endhighlight %}</div>
+      </article>
+    </div>
+
+    <article id="progress-value" class="attribute attribute--required">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="value">
+            value
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines the value of the progress bar, on the scale defined by the <code>max</code> attribute.</p>
+
+            <strong class="attribute-is-required">Required.</strong>
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="progress-value-07" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy value=&quot;0.7&quot;" data-clipboard-text="value=&quot;0.7&quot;">
+                      "0.7"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use <strong>decimal</strong> and <strong>negative</strong> numbers. It must be between the <code>min</code> and <code>max</code> values.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><progress  value="0.7"></progress></div>
+            </aside>
+          </article>
+          <article id="progress-value-42" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy value=&quot;-42&quot;" data-clipboard-text="value=&quot;-42&quot;">
+                      "-42"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>If you use a value that is lower than the minimum, the progress bar will be empty.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><progress  value="-42"></progress></div>
+            </aside>
+          </article>
+          <article id="progress-value-63" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy value=&quot;63&quot;" data-clipboard-text="value=&quot;63&quot;">
+                      "63"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>If you use a value that is higher than the maximum, the progress bar will be full.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><progress  value="63"></progress></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+    <article id="progress-max" class="attribute">
+      <header class="attribute-header">
+        <h3 class="attribute-name">
+          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="max">
+            max
+          </code>
+        </h3>
+        <div class="attribute-description">
+          <p>Defines the maximum value possible on the progress bar.</p>
+
+        </div>
+      </header>
+
+      <div class="attribute-values">
+          <article id="progress-max-1" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy max=&quot;1&quot;" data-clipboard-text="max=&quot;1&quot;">
+                      "1"
+                  </code>
+                </h4>
+              <div class="value-description">
+                  <strong class="value-is-default">Default.</strong>
+                <p>You can use <strong>decimal</strong> and <strong>negative</strong> numbers.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><progress  value="0.7" max="1"></progress></div>
+            </aside>
+          </article>
+          <article id="progress-max-100" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy max=&quot;100&quot;" data-clipboard-text="max=&quot;100&quot;">
+                      "100"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use <strong>decimal</strong> and <strong>negative</strong> numbers.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><progress  value="40" max="100"></progress></div>
+            </aside>
+          </article>
+      </div>
+    </article>
+</section>
