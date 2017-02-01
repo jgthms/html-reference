@@ -1,0 +1,133 @@
+<article class="finder">
+  <div class="menu-search">
+    <input id="finder-input" type="search" autocomplete="off" placeholder="Search 113 HTML elements">
+    <i class="icon is-search"></i>
+  </div>
+  <div id="finder-list" class="finder-list">
+    {% include lists/finder-list.html %}
+  </div>
+</article>
+
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  var $searchInput = document.getElementById('finder-input');
+  var $finderList = document.getElementById('finder-list');
+  var $finderItems = document.querySelectorAll('.finder-item');
+  var isFocused = false;
+  var isSearching = false;
+  var isModaling = false;
+  var currentMatch = -1;
+  var matches = initializeMatches($finderItems);
+
+  if ($searchInput) {
+    $searchInput.addEventListener('focus', function(event) {
+      isFocused = true;
+      isSearching = true;
+    });
+
+    $searchInput.addEventListener('blur', function(event) {
+      isFocused = false;
+      if (this.value === '') {
+        globalReset();
+      }
+    });
+
+    $searchInput.addEventListener('keyup', function(event) {
+      var query = this.value.toLowerCase();
+      isFocused = (this === document.activeElement);
+
+      if (isFocused) {
+        isSearching = true;
+
+        if (query.length > 0) {
+          matches = [];
+          currentMatch = -1;
+          $finderList.classList.add('is-searching');
+          Array.prototype.forEach.call($finderItems, function($el, index) {
+            var elementName = $el.dataset.elementName;
+            console.log('elementName', elementName);
+            var isMatch = highlightQuery($el, elementName, query);
+
+            if (isMatch) {
+              matches.push({
+                DOMIndex: index,
+                elementName: elementName,
+              });
+            }
+          });
+        } else {
+          $finderList.classList.remove('is-searching');
+          Array.prototype.forEach.call($finderItems, function($el) {
+            var $elName = $el.querySelector('.item-name');
+            $elName.innerHTML = $el.dataset.elementName;
+          });
+        }
+      }
+    });
+
+    window.addEventListener('click', function(event) {
+      if (!isFocused) {
+        isSearching = false;
+        cleanfinder($finderItems, false, true);
+      }
+    });
+
+    window.addEventListener('keydown', function(event) {
+      var key = event.code || event.key || false;
+
+      switch (key) {
+      case 'Enter':
+        if (isSearching && currentMatch > -1) {
+          event.preventDefault();
+          var elementName = matches[currentMatch].elementName;
+          var $target = document.getElementById(elementName);
+
+          if ($target) {
+            $target.scrollIntoView();
+          } else {
+            window.location = window.location.origin + '/element/' + elementName;
+          }
+        }
+        break;
+      case 'Escape':
+        if (isModaling) {
+          closeModal();
+        } else {
+          isSearching = false;
+          globalReset();
+        }
+        break;
+      case 'ArrowUp':
+      case 'ArrowDown':
+        if (isSearching) {
+          event.preventDefault();
+          if (isFocused) {
+            $searchInput.blur();
+          }
+          var increment = (key === 'ArrowDown');
+          currentMatch = navigateMenu($finderItems, matches, currentMatch, increment);
+
+          if (currentMatch === -1) {
+            $searchInput.focus();
+          }
+          break;
+        }
+      }
+    });
+
+    function globalReset() {
+      isFocused = false;
+      $searchInput.value = '';
+      $searchInput.blur();
+      currentMatch = -1;
+      matches = initializeMatches($finderItems);
+      $finderList.classList.remove('is-searching');
+      cleanfinder($finderItems, true, true);
+    }
+  }
+
+});
+
+</script>

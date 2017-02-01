@@ -45,15 +45,7 @@ route: index
           </p>
         </div>
       </header>
-      <section class="list">
-        <div class="menu-search">
-          <input id="menu-search-input" type="search" autocomplete="off" placeholder="Search 113 HTML elements">
-          <i class="icon is-search"></i>
-        </div>
-        <div id="menu-list" class="list-list">
-          {% include lists/main-list.html %}
-        </div>
-      </section>
+      {% include components/finder.html %}
     </main>
     {% include modals/share.html %}
     {% include google-fonts.html %}

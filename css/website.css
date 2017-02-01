@@ -927,6 +927,58 @@ html ::selection {
     color: #fff;
     font-weight: 700; }
 
+.finder {
+  margin: 3rem;
+  max-width: 50%;
+  position: relative; }
+  .finder .menu-search {
+    border: 1px solid #e6e6e6; }
+    .finder .menu-search input {
+      font-size: 1rem; }
+
+.finder-list.is-searching .finder-item {
+  display: none; }
+  .finder-list.is-searching .finder-item.is-highlighted, .finder-list.is-searching .finder-item.is-selected {
+    display: block; }
+
+.finder-item {
+  align-items: stretch;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  margin-top: -1px;
+  position: relative; }
+  .finder-item.is-selected {
+    background: #ffdd57;
+    border-color: #ffdd57;
+    z-index: 1; }
+
+.finder-item-link {
+  display: block;
+  padding: 0.5em 1em;
+  transition: none; }
+  .finder-item-link:hover {
+    background: lightyellow; }
+  .finder-item-link .highlight {
+    background: #ffdd57;
+    color: #310736; }
+
+.finder-item-meta {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1em;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .finder-item-meta .tag {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 1em; }
+
 .list {
   padding-bottom: 3rem;
   position: relative; }
@@ -995,6 +1047,16 @@ html ::selection {
 .tag--experimental {
   background: #ffdd57;
   color: #310736; }
+
+.tag--type {
+  background: none;
+  box-shadow: inset 0 0 0 1px #23d160;
+  color: #23d160; }
+
+.tag--selfclosing {
+  background: none;
+  box-shadow: inset 0 0 0 1px #b86bff;
+  color: #b86bff; }
 
 .modal {
   bottom: 0;
