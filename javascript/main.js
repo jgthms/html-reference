@@ -210,9 +210,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var $elementShares = document.querySelectorAll('.element-share');
   var $modalInput = document.getElementById('modal-input');
   var baseURL = '' + window.location.origin + window.location.pathname;
-  baseURL = 'http://cssreference.io/';
-  var facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fcssreference.io';
-  var twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fcssreference.io&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
+  baseURL = 'http://htmlreference.io/';
+  var facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fhtmlreference.io';
+  var twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fhtmlreference.io&text=HTML%20Reference%3A%20a%20guide%20to%20all%20%23HTML%20elements%20and%20attributes';
 
   Array.prototype.forEach.call($elementShares, function($el, index) {
     $el.addEventListener('click', function(e) {
@@ -265,8 +265,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeModal() {
     isModaling = false;
     $modalShare.classList.remove('is-active');
-    facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fcssreference.io';
-    twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fcssreference.io&text=CSS%20Reference%3A%20a%20visual%20guide%20to%20the%20most%20popular%20%23CSS%20properties';
+    facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fhtmlreference.io';
+    twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fhtmlreference.io&text=HTML%20Reference%3A%20a%20guide%20to%20all%20%23HTML%20elements%20and%20attributes';
   }
 
   var modalClipboard = new Clipboard('#modal-copy');

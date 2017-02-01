@@ -1,4 +1,4 @@
-# [HTML Reference](http://htmlreference.io): a free visual guide to the most popular CSS properties
+# [HTML Reference](http://htmlreference.io): a free visual guide to HTML elements and attributes
 
 [![HTML Reference screenshot](https://raw.github.com/jgthms/html-reference/master/images/html-reference-share.png)](http://htmlreference.io)
 

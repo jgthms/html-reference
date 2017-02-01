@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <p><strong>HTML Elements</strong></p>
     <ul>
       <li><a class="menu-collection-link{% if page.route == 'index' %} menu-collection-link--active{% endif %}" href="{{site.url}}">All</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Form' %} menu-collection-link--active{% endif %}" href="{{site.url}}/html-elements/form/">Form</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Forms' %} menu-collection-link--active{% endif %}" href="{{site.url}}/forms/">Form</a></li>
     </ul>
     <p><strong>HTML Templates</strong></p>
     <ul>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Content' %} menu-collection-link--active{% endif %}" href="{{site.url}}/html-templates/content/">Content</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Forms' %} menu-collection-link--active{% endif %}" href="{{site.url}}/html-templates/forms/">Forms</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Tables' %} menu-collection-link--active{% endif %}" href="{{site.url}}/html-templates/table/">Tables</a></li>
+      <li><a class="menu-collection-link{% if page.template_name == 'Content' %} menu-collection-link--active{% endif %}" href="{{site.url}}/templates/content/">Content</a></li>
+      <li><a class="menu-collection-link{% if page.template_name == 'Forms' %} menu-collection-link--active{% endif %}" href="{{site.url}}/templates/forms/">Forms</a></li>
+      <li><a class="menu-collection-link{% if page.template_name == 'Tables' %} menu-collection-link--active{% endif %}" href="{{site.url}}/templates/table/">Tables</a></li>
     </ul>
     <p><strong><a class="menu-collection-link" href="{{site.url}}/html-global-attributes/">Global attributes</a></strong></p>
   </nav>
@@ -57,6 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
       <div id="menu-list" class="menu-list">
         <ul id="menu-list-ul" class="menu-list-ul">
+          {% if page.menu_list && page.layout == "collection" %}
+            {% include collections/{{page.menu_list}}.html %}
+          {% endif %}
         </ul>
         <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
         <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
