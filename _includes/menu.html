@@ -27,15 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </script-->
 
 <aside class="menu">
-  <header class="menu-header">
-    <a id="logo" class="menu-logo" href="{{site.url}}">
-      <figure>
-        <img class="menu-logo-icon" src="{{site.url}}/images/html-reference-icon.png" alt="HTML Reference icon">
-        <img class="menu-logo-type" src="{{site.url}}/images/html-reference-type.png" alt="HTML Reference type">
-      </figure>
-    </a>
-  </header>
-  <nav class="menu-collections">
+  <a id="logo" class="menu-logo" href="{{site.url}}">
+    <img src="{{site.url}}/images/html-reference-logo.png" alt="{{site.title}} logo">
+  </a>
+  <!-- <nav class="menu-collections">
     <p><strong>HTML Elements</strong></p>
     <ul>
       <li><a class="menu-collection-link{% if page.route == 'index' %} menu-collection-link--active{% endif %}" href="{{site.url}}">All</a></li>
@@ -48,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <li><a class="menu-collection-link{% if page.template_name == 'Tables' %} menu-collection-link--active{% endif %}" href="{{site.url}}/templates/table/">Tables</a></li>
     </ul>
     <p><strong><a class="menu-collection-link" href="{{site.url}}/html-global-attributes/">Global attributes</a></strong></p>
-  </nav>
+  </nav> -->
   {% if page.route != "index" %}
     <nav id="menu-nav" class="menu-nav">
       <div class="menu-search">
@@ -101,27 +96,14 @@ document.addEventListener('DOMContentLoaded', function() {
   </p>
   <p class="footer-share footer-share--social">
     <strong class="footer-share-label">Share</strong>
-    <a class="footer-share-button is-twitter"
-      data-social-network="Twitter"
-      data-social-action="tweet"
-      data-social-target="{{site.url}}{{page.url}}"
-      href="https://twitter.com/intent/tweet?url={{site.url | url_encode}}&text={{site.share | url_encode}}"
-      rel="external nofollow"
-      target="_blank">
-      {% include svg/twitter.html %}
-    </a>
-    <a class="footer-share-button is-facebook"
-      href="http://www.facebook.com/sharer.php?u={{site.url | url_encode}}"
-      rel="external nofollow"
-      target="_blank">
-      {% include svg/facebook.html %}
-    </a>
+    {% include social/button-twitter.html %}
+    {% include social/button-facebook.html %}
     <a id="menu-nav-open" class="footer-share-nav">Menu</a>
   </p>
   <div class="footer-facebook">
-    <iframe class="footer-iframe" data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcssreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670" width="100" height="20" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    {% include social/iframe-facebook.html %}
   </div>
   <div class="footer-github">
-    <iframe class="footer-iframe" data-src="https://ghbtns.com/github-btn.html?user=jgthms&repo=css-reference&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+    {% include social/iframe-github.html %}
   </div>
 </footer>

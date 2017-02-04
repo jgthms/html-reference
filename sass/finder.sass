@@ -39,19 +39,20 @@
   .highlight
     background: $yellow
     color: $yellow-invert
+  .light--experimental
+    margin-left: 4px
+    position: relative
+    top: -1px
 
 .finder-item-meta
   align-items: center
   bottom: 0
   display: flex
   justify-content: flex-end
-  padding: 0 1em
   pointer-events: none
   position: absolute
   right: 0
   top: 0
-  .light
-    margin-left: 4px
 
 .finder-checkboxes
   display: flex
@@ -111,13 +112,32 @@ label.light
     opacity: 1
 
 +mobile
+  .finder
+    padding-bottom: 1rem
   .finder-checkboxes
     flex-wrap: wrap
+    padding: 0 1rem
     .light
       margin-bottom: 0.5em
+      margin-right: 0.5em
+  .finder-item-link
+    .light--experimental
+      display: none
+  .finder-item-meta
+    padding-right: 0.5rem
+    .light
+      margin-left: 2px
 
 +desktop
+  .finder
+    padding: 1rem 0 3rem
+    .menu-search
+      margin-bottom: 1rem
   .finder-checkboxes
     padding: 0 1rem 1rem
     .light
       margin-right: 4px
+  .finder-item-meta
+    padding: 0 1em
+    .light
+      margin-left: 4px

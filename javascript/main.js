@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var template = $root.dataset.template;
 
   // Load iframes
-  var $footerIframes = document.querySelectorAll('.footer-iframe');
+  var $iframes = document.querySelectorAll('.iframe');
 
-  Array.prototype.forEach.call($footerIframes, function($iframe) {
+  Array.prototype.forEach.call($iframes, function($iframe) {
     var src = $iframe.dataset.src;
     $iframe.src = src;
   });
