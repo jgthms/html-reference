@@ -353,6 +353,7 @@ function cleanMenu($menuItems, highlight, selection) {
 }
 
 function navigateMenu($menuItems, matches, currentIndex, increment = true) {
+  console.log('matches', matches);
   Array.prototype.forEach.call($menuItems, function($el, index) {
     $el.classList.remove('is-selected');
   });

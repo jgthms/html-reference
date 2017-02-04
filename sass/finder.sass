@@ -8,7 +8,8 @@
   &.is-searching
     .finder-item
       display: none
-      &.is-highlighted,
+      &.is-highlighted:not(.is-hidden)
+        display: block
       &.is-selected
         display: block
 
@@ -17,6 +18,8 @@
   cursor: pointer
   justify-content: space-between
   position: relative
+  &.is-hidden
+    display: none
   &.is-selected
     z-index: 1
     .finder-item-link
@@ -47,43 +50,74 @@
   position: absolute
   right: 0
   top: 0
+  .light
+    margin-left: 4px
 
-.finder-tag
+.finder-checkboxes
+  display: flex
+  .light
+    align-items: center
+    display: flex
+    justify-content: flex-start
+
+.light
   border-radius: 2px
   color: rgba(0,0,0,0.48)
   font-size: 0.8em
   font-weight: normal
   line-height: 1.2
-  margin-left: 0.5em
   opacity: 0.5
   padding: 2px 4px
   text-transform: lowercase
+  white-space: nowrap
 
-.finder-tag--experimental
+label.light
+  cursor: pointer
+  input
+    cursor: pointer
+    margin-right: 4px
+
+.light--experimental
   background-color: $yellow
   color: $yellow-invert
   opacity: 1
 
-.finder-item--meta
-  .finder-tag--meta
+.light--meta
+  .finder-item--meta &,
+  &.is-active
     background-color: rgba($purple, 0.29)
     color: $text-strong
     opacity: 1
 
-.finder-item--inline
-  .finder-tag--inline
+.light--inline
+  .finder-item--inline &,
+  &.is-active
     background-color: rgba($green, 0.29)
     color: $text-strong
     opacity: 1
 
-.finder-item--block
-  .finder-tag--block
+.light--block
+  .finder-item--block &,
+  &.is-active
     background-color: rgba($blue, 0.29)
     color: $text-strong
     opacity: 1
 
-.finder-item--selfclosing
-  .finder-tag--selfclosing
+.light--selfclosing
+  .finder-item--selfclosing &,
+  &.is-active
     background-color: rgba($red, 0.29)
     color: $text-strong
     opacity: 1
+
++mobile
+  .finder-checkboxes
+    flex-wrap: wrap
+    .light
+      margin-bottom: 0.5em
+
++desktop
+  .finder-checkboxes
+    padding: 0 1rem 1rem
+    .light
+      margin-right: 4px

@@ -3,6 +3,13 @@
     <input id="finder-input" type="search" autocomplete="off" placeholder="Search 113 HTML elements">
     <i class="icon is-search"></i>
   </div>
+  <div id="finder-checkboxes" class="finder-checkboxes">
+    <label class="light light--experimental is-active"><input type="checkbox" name="experimental" checked>experimental</label>
+    <label class="light light--meta is-active"><input type="checkbox" name="meta" checked>meta</label>
+    <label class="light light--selfclosing is-active"><input type="checkbox" name="selfclosing" checked>self-closing</label>
+    <label class="light light--inline is-active"><input type="checkbox" name="inline" checked>inline</label>
+    <label class="light light--block is-active"><input type="checkbox" name="block" checked>block</label>
+  </div>
   <div id="finder-list" class="finder-list">
     {% include lists/finder-list.html %}
   </div>
@@ -15,6 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var $searchInput = document.getElementById('finder-input');
   var $finderList = document.getElementById('finder-list');
   var $finderItems = document.querySelectorAll('.finder-item');
+  var $finderCheckboxes = document.querySelectorAll('#finder-checkboxes input');
+  var lights = {
+    experimental: true,
+    meta: true,
+    selfClosing: true,
+    inline: true,
+    block: true,
+  }
   var isFocused = false;
   var isSearching = false;
   var isModaling = false;
@@ -49,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var elementName = $el.dataset.elementName;
             var isMatch = highlightQuery($el, elementName, query);
 
-            if (isMatch) {
+            if (isMatch && !$el.classList.contains('is-hidden')) {
               matches.push({
                 DOMIndex: index,
                 elementName: elementName,
@@ -64,6 +79,13 @@ document.addEventListener('DOMContentLoaded', function() {
           });
         }
       }
+    });
+
+    Array.prototype.forEach.call($finderCheckboxes, function($el) {
+      $el.addEventListener('change', function(event) {
+        lights[this.name] = this.checked;
+        changeLights();
+      });
     });
 
     window.addEventListener('click', function(event) {
@@ -116,6 +138,31 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
+    function checkLights() {
+      Array.prototype.forEach.call($finderCheckboxes, function($el) {
+        lights[this.name] = this.checked;
+      });
+    }
+
+    function changeLights() {
+      Array.prototype.forEach.call($finderItems, function($el, index) {
+        var hide = false;
+
+        Object.keys(lights).forEach(function(key) {
+          // Check if we hide "experimental"
+          if (!lights[key]) {
+            hide = (hide) || ($el.dataset[key] == 'true');
+          }
+        });
+
+        if (hide) {
+          $el.classList.add('is-hidden');
+        } else {
+          $el.classList.remove('is-hidden');
+        }
+      });
+    }
+
     function globalReset() {
       isFocused = false;
       $searchInput.value = '';
@@ -125,6 +172,9 @@ document.addEventListener('DOMContentLoaded', function() {
       $finderList.classList.remove('is-searching');
       cleanMenu($finderItems, true, true);
     }
+
+    checkLights();
+    changeLights();
   }
 
 });

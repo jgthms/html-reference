@@ -3,9 +3,12 @@ layout: single
 elementName: slot
 ---
 
-<section id="slot" class="element">
+<section id="slot" class="element element--experimental">
   <header class="element-header">
     <nav class="element-links">
+        <span>
+          Type: <strong>inline</strong>
+        </span>
       <span>
         Self-closing:
         <strong>
@@ -21,6 +24,7 @@ elementName: slot
         <span>#</span>
         slot
       </a>
+        <span class="tag tag--experimental">Experimental</span>
     </h2>
     <div class="element-description">
       <p>Defines a container for <strong>user markup</strong>.</p>
@@ -29,29 +33,4 @@ elementName: slot
   </header>
 
 
-    <article id="slot-name" class="attribute">
-      <header class="attribute-header">
-        <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="name">
-            name
-          </code>
-        </h3>
-        <div class="attribute-description">
-          
-        </div>
-      </header>
-
-      <div class="attribute-values">
-          <article id="slot-name-" class="value">
-            <header class="value-header">
-              <div class="value-description">
-                
-              </div>
-            </header>
-            <aside class="value-preview">
-              <div class="value-output"><slot  name></slot></div>
-            </aside>
-          </article>
-      </div>
-    </article>
 </section>
