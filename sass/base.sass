@@ -59,7 +59,14 @@ html
     background: $primary
     color: $primary-invert
 
+.container
+  margin-left: auto
+  margin-right: auto
+  max-width: 780px
+
 +desktop
   html
     font-size: 18px
     padding-left: $menu-width
+    &.is-index
+      padding-left: 0

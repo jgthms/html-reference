@@ -9,7 +9,7 @@
 
 .menu-logo
   align-items: center
-  background: $orange
+  background: $primary
   display: flex
   justify-content: center
   figure
@@ -46,12 +46,12 @@
   border-radius: 2px
   padding: 3px 6px
   &:hover
-    background: $alpha
-    color: $alpha-invert
+    background: $primary
+    color: $primary-invert
 
 .menu-collection-link--active
-  background: $alpha
-  color: $alpha-invert
+  background: $primary
+  color: $primary-invert
 
 .menu-nav
   align-items: stretch
@@ -96,10 +96,6 @@
     -webkit-overflow-scrolling: touch
     flex-grow: 1
     overflow: auto
-  .menu-link
-    display: block
-    padding: 0.75rem 2rem
-    transition: none
   &.is-searching
     .menu-item
       display: none
@@ -107,16 +103,32 @@
       &.is-selected,
         display: block
 
+.menu-link
+  display: block
+  padding: 0.75rem 2rem
+  transition: none
+  &:visited
+    color: $purple
+  &:hover
+    background: $background
+  .highlight
+    background: $yellow
+    color: $yellow-invert
+
 .menu-item
   .highlight
     background: $yellow
     color: $yellow-invert
-  &:hover,
   &.is-selected
-    background: $alpha
-    color: $alpha-invert
+    background: $primary
+    color: $primary-invert
+    .menu-link
+      &,
+      &:hover
+        background: $primary
+        color: $primary-invert
     .menu-item-name
-      color: $alpha-invert
+      color: $primary-invert
 
 .menu-list-shadow
   display: block
@@ -175,7 +187,7 @@
     position: relative
     &:before
       background: hsl(171, 100%, 81%)
-      background: $orange
+      background: $primary
       bottom: 0
       content: ""
       height: 2px

@@ -1,9 +1,6 @@
 .finder
-  margin: 3rem
-  max-width: 50%
   position: relative
   .menu-search
-    border: 1px solid $border
     input
       font-size: 1rem
 
@@ -12,28 +9,30 @@
     .finder-item
       display: none
       &.is-highlighted,
-      &.is-selected,
+      &.is-selected
         display: block
 
 .finder-item
   align-items: stretch
-  border: 1px solid $border
   cursor: pointer
-  font-size: 0.8rem
   justify-content: space-between
-  margin-top: -1px
   position: relative
   &.is-selected
-    background: $yellow
-    border-color: $yellow
     z-index: 1
+    .finder-item-link
+      &,
+      &:hover
+        background: $primary
+        color: $primary-invert
 
 .finder-item-link
   display: block
-  padding: 0.5em 1em
+  padding: 0.25rem 1rem
   transition: none
+  &:visited
+    color: $purple
   &:hover
-    background: lightyellow
+    background: $background
   .highlight
     background: $yellow
     color: $yellow-invert
@@ -48,7 +47,43 @@
   position: absolute
   right: 0
   top: 0
-  .tag
-    font-size: 12px
-    font-weight: normal
-    margin-left: 1em
+
+.finder-tag
+  border-radius: 2px
+  color: rgba(0,0,0,0.48)
+  font-size: 0.8em
+  font-weight: normal
+  line-height: 1.2
+  margin-left: 0.5em
+  opacity: 0.5
+  padding: 2px 4px
+  text-transform: lowercase
+
+.finder-tag--experimental
+  background-color: $yellow
+  color: $yellow-invert
+  opacity: 1
+
+.finder-item--meta
+  .finder-tag--meta
+    background-color: rgba($purple, 0.29)
+    color: $text-strong
+    opacity: 1
+
+.finder-item--inline
+  .finder-tag--inline
+    background-color: rgba($green, 0.29)
+    color: $text-strong
+    opacity: 1
+
+.finder-item--block
+  .finder-tag--block
+    background-color: rgba($blue, 0.29)
+    color: $text-strong
+    opacity: 1
+
+.finder-item--selfclosing
+  .finder-tag--selfclosing
+    background-color: rgba($red, 0.29)
+    color: $text-strong
+    opacity: 1

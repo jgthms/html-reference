@@ -30,22 +30,30 @@ route: index
     {% include favicons.html %}
   </head>
   <body>
-    {% include menu.html %}
-    <main class="main">
-      <header class="header">
-        <div class="header-container">
-          <h1 class="header-figure">
-            {{site.title}}
-          </h1>
+    <header class="header">
+      <div class="container">
+        <h1 class="header-figure">
+          <img src="{{site.url}}/images/html-reference-icon.png" alt="{{site.title}} icon">
+          <img src="{{site.url}}/images/html-reference-type.png" alt="{{site.title}} type">
+        </h1>
+        <div class="header-content">
           <h2 class="header-title">
-            A free guide to HTML
+            A free visual guide to HTML5
           </h2>
           <p class="header-subtitle">
             <strong>Learn by example</strong>: <a href="{{site.url}}">htmlreference.io</a> is a free guide to HTML. It features all <strong>elements</strong> and <strong>attributes</strong>.
           </p>
         </div>
-      </header>
-      {% include components/finder.html %}
+      </div>
+    </header>
+    <main class="index">
+      <div class="container">
+        <div class="index-left">
+          {% include components/finder.html %}
+        </div>
+        <div class="index-right">
+        </div>
+      </div>
     </main>
     {% include modals/share.html %}
     {% include google-fonts.html %}

@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
           $menuList.classList.add('is-searching');
           Array.prototype.forEach.call($menuItems, function($el, index) {
             var elementName = $el.dataset.elementName;
-            console.log('elementName', elementName);
             var isMatch = highlightQuery($el, elementName, query);
 
             if (isMatch) {
