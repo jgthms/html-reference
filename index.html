@@ -37,17 +37,22 @@ route: index
           <img src="{{site.url}}/images/html-reference-type.png" alt="{{site.title}} type">
         </h1>
         <div class="header-content">
-          <h2 class="header-title">
-            {{site.subtitle}}
-          </h2>
-          <p class="header-subtitle">
-            <strong>Learn by example</strong>: <a href="{{site.url}}">htmlreference.io</a> is a free guide to HTML. It features all <strong>elements</strong> and <strong>attributes</strong>.
-          </p>
+          <div class="header-carbon">
+            {% include carbon.html %}
+          </div>
+          <div class="header-text">
+            <h2 class="header-title">
+              {{site.subtitle}}
+            </h2>
+            <p class="header-subtitle">
+              <strong>Learn by example</strong>: <a href="{{site.url}}">htmlreference.io</a> is a free guide to HTML. It features all <strong>elements</strong> and <strong>attributes</strong>.
+            </p>
+            <footer class="header-share">
+              {% include social/button-twitter.html %}
+              {% include social/button-facebook.html %}
+            </footer>
+          </div>
         </div>
-        <footer class="header-share">
-          {% include social/button-twitter.html %}
-          {% include social/button-facebook.html %}
-        </footer>
       </div>
     </header>
     <main class="index">

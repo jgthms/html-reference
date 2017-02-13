@@ -7,11 +7,21 @@
     height: 128px
     width: 128px
 
+.header-carbon
+  background-color: white
+  border-radius: 5px
+  box-shadow: 0 0 1rem rgba(#000, 0.2)
+  display: flex
+  flex-shrink: 0
+  width: 240px
+  #huggingFace
+
 .header-title
   color: $text-strong
   font-size: 1.2rem
   font-weight: bold
   line-height: 1.6rem
+  margin-bottom: 1rem
 
 .header-subtitle
   line-height: 1.6rem
@@ -24,7 +34,7 @@
   align-items: center
   display: flex
   justify-content: center
-  margin-top: 30px
+  margin-top: 1rem
   .share-button
     height: 48px
     width: 48px
@@ -42,6 +52,9 @@
     margin-bottom: 30px
     img:last-child
       height: 40px
+  .header-carbon
+    justify-content: center
+    margin: 0 auto 2rem
   .header-subtitle
     margin-top: 10px
 
@@ -55,10 +68,13 @@
     img:last-child
       height: 80px
       margin-left: 20px
+  .header-carbon
+    margin-left: 1rem
+    margin-right: 2rem
   .header-content
+    align-items: center
     display: flex
-  .header-title
-    flex-basis: 40%
-    padding: 0 1rem
-  .header-subtitle
-    flex-basis: 60%
+  .header-text
+    margin-right: 2rem
+  .header-share
+    justify-content: flex-start

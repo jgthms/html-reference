@@ -1,31 +1,3 @@
-<!--script type="text/javascript">
-window.carbonLoaded = false;
-
-window.helloCarbon = function() {
-  window.carbonLoaded = true;
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  var $menuHello = document.getElementById('menuHello');
-  var $huggingFace = document.getElementById('huggingFace');
-  var $carbon = document.getElementById('carbon');
-  var $placeholder = document.getElementById('placeholder');
-
-  setTimeout(function() {
-    if (window.carbonLoaded) {
-      $menuHello.style.minHeight = '218px';
-      $huggingFace.style.display = 'none';
-      $carbon.style.display = 'block';
-    } else {
-      $menuHello.style.minHeight = '0';
-      $huggingFace.style.display = 'block';
-      $carbon.style.display = 'none';
-    }
-    $placeholder.style.display = 'none';
-  }, 2000);
-});
-</script-->
-
 <aside class="menu">
   <a id="logo" class="menu-logo" href="{{site.url}}">
     <img src="{{site.url}}/images/html-reference-logo.png" alt="{{site.title}} logo">
@@ -67,26 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
       </a>
     </nav>
   {% endif %}
-  <!--footer id="menuHello" class="menu-hello">
-    <div id="huggingFace">
-      <p>
-        HTML Reference is <strong>free</strong> and always will be!
-      </p>
-      <p>
-        Please whitelist us in your ad blocker.
-      </p>
-      <p>
-        Thank you! <img src="{{site.url}}/images/hugging-face.png" alt="Hugging face emoji">
-      </p>
-    </div>
-    <div id="placeholder" class="placeholder">
-      <div class="placeholder-image"><div></div></div>
-      <div class="placeholder-content"><div></div><div></div><div></div></div>
-      <div class="placeholder-footer"><div></div></div>
-    </div>
-    <div id="carbon">
-      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=htmlreferenceio" id="_carbonads_js" onload ="window.helloCarbon()"></script>
-    </div-->
+  <footer class="menu-hello">
+    {% include carbon.html %}
   </footer>
 </aside>
 
