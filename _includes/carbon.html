@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var $placeholder = document.getElementById('placeholder');
 
   setTimeout(function() {
-    if (!window.carbonLoaded) {
+    if (window.carbonLoaded) {
       $hello.style.minHeight = '218px';
       $huggingFace.style.display = 'none';
       $carbon.style.display = 'block';
