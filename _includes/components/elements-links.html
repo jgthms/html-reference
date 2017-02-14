@@ -1,0 +1,20 @@
+<nav class="element-links">
+  {% if page.elementType == '' %}
+  {% else %}
+  <span>
+    Type: <strong>{{ page.elementType }}</strong>
+  </span>
+  {% endif %}
+  {% if page.selfClosing == '' %}
+  {% else %}
+  <span>
+    Self-closing:
+    <strong>
+      {{ page.selfClosing }}
+    </strong>
+  </span>
+  {% endif %}
+  <a class="element-links-direct" href="{{site.url}}/element/{{ page.elementName }}/" data-element-name="a" data-tooltip="Single page for this element">Permalink</a>
+  <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="{{ page.elementName }}">Share</a>
+  <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/{{ page.elementName }}" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
+</nav>

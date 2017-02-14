@@ -1,33 +1,21 @@
 ---
 layout: single
 elementName: a
+elementType: inline
+selfClosing: no
 ---
 
-<section id="a" class="element">
+<section id="{{ page.elementName }}" class="element">
   <header class="element-header">
-    <nav class="element-links">
-        <span>
-          Type: <strong>inline</strong>
-        </span>
-      <span>
-        Self-closing:
-        <strong>
-            No
-        </strong>
-      </span>
-      <a class="element-links-direct" href="{{site.url}}/element/a/" data-element-name="a" data-tooltip="Single page for this element">Permalink</a>
-      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="a">Share</a>
-      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/a" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
-    </nav>
+    {% include components/elements-links.html %}
     <h2 class="element-name">
-      <a href="/#a">
+      <a href="/#{{ page.elementName }}">
         <span>#</span>
-        a
+        {{ page.elementName }}
       </a>
     </h2>
     <div class="element-description">
       <p>Creates a <strong>link</strong> to a URL: a web page, a section within a page, an email address... Also called the <code>anchor</code> element, where the <code>a</code> comes from.</p>
-
     </div>
   </header>
 
