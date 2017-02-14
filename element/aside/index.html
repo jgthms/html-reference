@@ -1,28 +1,17 @@
 ---
 layout: single
 elementName: aside
+elementType: block
+selfClosing: no
 ---
 
-<section id="aside" class="element">
+<section id="{{ page.elementName }}" class="element">
   <header class="element-header">
-    <nav class="element-links">
-        <span>
-          Type: <strong>block</strong>
-        </span>
-      <span>
-        Self-closing:
-        <strong>
-            No
-        </strong>
-      </span>
-      <a class="element-links-direct" href="{{site.url}}/element/aside/" data-element-name="aside" data-tooltip="Single page for this element">Permalink</a>
-      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="aside">Share</a>
-      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/aside" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
-    </nav>
+    {% include components/elements-links.html %}
     <h2 class="element-name">
-      <a href="/#aside">
+      <a href="/#{{ page.elementName }}">
         <span>#</span>
-        aside
+        {{ page.elementName }}
       </a>
     </h2>
     <div class="element-description">
