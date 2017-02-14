@@ -56,11 +56,19 @@ route: index
       </div>
     </header>
     <main class="index">
+      <div class="index-collections">
+        <div class="container">
+          <strong>Collections:</strong>
+          <a href="{{site.url}}/base/">Base elements</a>
+          <a href="{{site.url}}/forms/">Forms</a>
+          <a href="{{site.url}}/lists/">Lists</a>
+          <a href="{{site.url}}/structure/">Structure</a>
+          <a href="{{site.url}}/tables/">Tables</a>
+        </div>
+      </div>
       <div class="container">
         <div class="index-left">
           {% include components/finder.html %}
-        </div>
-        <div class="index-right">
         </div>
       </div>
     </main>

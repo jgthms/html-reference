@@ -2,20 +2,24 @@
   <a id="logo" class="menu-logo" href="{{site.url}}">
     <img src="{{site.url}}/images/html-reference-logo.png" alt="{{site.title}} logo">
   </a>
-  <!-- <nav class="menu-collections">
+  <nav class="menu-collections">
     <p><strong>HTML Elements</strong></p>
     <ul>
       <li><a class="menu-collection-link{% if page.route == 'index' %} menu-collection-link--active{% endif %}" href="{{site.url}}">All</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Forms' %} menu-collection-link--active{% endif %}" href="{{site.url}}/forms/">Form</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Base elements' %} menu-collection-link--active{% endif %}" href="{{site.url}}/base/">Base</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Forms' %} menu-collection-link--active{% endif %}" href="{{site.url}}/forms/">Forms</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Lists' %} menu-collection-link--active{% endif %}" href="{{site.url}}/lists/">Lists</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Structure' %} menu-collection-link--active{% endif %}" href="{{site.url}}/structure/">Structure</a></li>
+      <li><a class="menu-collection-link{% if page.collection_name == 'Tables' %} menu-collection-link--active{% endif %}" href="{{site.url}}/tables/">Tables</a></li>
     </ul>
-    <p><strong>HTML Templates</strong></p>
+    <!-- <p><strong>HTML Templates</strong></p>
     <ul>
       <li><a class="menu-collection-link{% if page.template_name == 'Content' %} menu-collection-link--active{% endif %}" href="{{site.url}}/templates/content/">Content</a></li>
       <li><a class="menu-collection-link{% if page.template_name == 'Forms' %} menu-collection-link--active{% endif %}" href="{{site.url}}/templates/forms/">Forms</a></li>
       <li><a class="menu-collection-link{% if page.template_name == 'Tables' %} menu-collection-link--active{% endif %}" href="{{site.url}}/templates/table/">Tables</a></li>
     </ul>
-    <p><strong><a class="menu-collection-link" href="{{site.url}}/html-global-attributes/">Global attributes</a></strong></p>
-  </nav> -->
+    <p><strong><a class="menu-collection-link" href="{{site.url}}/html-global-attributes/">Global attributes</a></strong></p> -->
+  </nav>
   {% if page.route != "index" %}
     <nav id="menu-nav" class="menu-nav">
       <div class="menu-search">

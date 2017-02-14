@@ -316,7 +316,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if ($target) {
         $target.scrollIntoView();
-        history.replaceState('', document.title, '#' + elementName);
       } else {
         window.location = window.location.origin + '/element/' + elementName;
       }
