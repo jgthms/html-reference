@@ -1,28 +1,17 @@
 ---
 layout: single
 elementName: br
+elementType: inline
+selfClosing: yes
 ---
 
-<section id="br" class="element">
+<section id="{{ page.elementName }}" class="element">
   <header class="element-header">
-    <nav class="element-links">
-        <span>
-          Type: <strong>inline</strong>
-        </span>
-      <span>
-        Self-closing:
-        <strong>
-            Yes
-        </strong>
-      </span>
-      <a class="element-links-direct" href="{{site.url}}/element/br/" data-element-name="br" data-tooltip="Single page for this element">Permalink</a>
-      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="br">Share</a>
-      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/br" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
-    </nav>
+    {% include components/elements-links.html %}
     <h2 class="element-name">
-      <a href="/#br">
+      <a href="/#{{ page.elementName }}">
         <span>#</span>
-        br
+        {{ page.elementName }}
       </a>
     </h2>
     <div class="element-description">
