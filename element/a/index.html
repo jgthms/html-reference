@@ -5,13 +5,13 @@ elementType: inline
 selfClosing: no
 ---
 
-<section id="{{ page.elementType }}" class="element">
+<section id="{{ page.elementName }}" class="element">
   <header class="element-header">
     {% include components/elements-links.html %}
     <h2 class="element-name">
-      <a href="/#{{ page.elementType }}">
+      <a href="/#{{ page.elementName }}">
         <span>#</span>
-        {{ page.elementType }}
+        {{ page.elementName }}
       </a>
     </h2>
     <div class="element-description">
