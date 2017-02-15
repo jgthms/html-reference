@@ -1,25 +1,17 @@
 ---
 layout: single
 elementName: dt
+elementType:
+selfClosing: no
 ---
 
-<section id="dt" class="element">
+<section id="{{ page.elementName }}" class="element">
   <header class="element-header">
-    <nav class="element-links">
-      <span>
-        Self-closing:
-        <strong>
-            No
-        </strong>
-      </span>
-      <a class="element-links-direct" href="{{site.url}}/element/dt/" data-element-name="dt" data-tooltip="Single page for this element">Permalink</a>
-      <a class="element-share" data-tooltip="Share on Twitter or Facebook" data-element-name="dt">Share</a>
-      <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/dt" data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a>
-    </nav>
+    {% include components/elements-links.html %}
     <h2 class="element-name">
-      <a href="/#dt">
+      <a href="/#{{ page.elementName }}">
         <span>#</span>
-        dt
+        {{ page.elementName }}
       </a>
     </h2>
     <div class="element-description">
