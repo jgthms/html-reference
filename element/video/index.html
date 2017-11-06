@@ -32,8 +32,18 @@ elementName: video
     </div>
   </header>
 
+      <div id="video-example-0" class="example">
+        <p class="example-label">
+          <strong>Example:</strong>
+          <a class="example-clipboard" data-tooltip="Click to copy code" data-clipboard-target="#video-example-0-code">Copy</a>
+        </p>
+        <article class="example-preview">
+            <div class="example-output"><video src="/assets/HTML 5 Video.mp4" controls></video></div>
+          <div id="video-example-0-code" class="example-code">{% highlight html %}<video src="/assets/HTML 5 Video.mp4" controls></video>{% endhighlight %}</div>
+        </article>
+      </div>
 
-    <article id="video-src" class="attribute">
+    <article id="video-src" class="attribute attribute--required">
       <header class="attribute-header">
         <h3 class="attribute-name">
           <code class="tag" data-tooltip="Click to copy" data-clipboard-text="src">
@@ -41,15 +51,32 @@ elementName: video
           </code>
         </h3>
         <div class="attribute-description">
-          <p>HelloWorld</p>
+          <p>Defines the source of the video file.</p>
 
+            <strong class="attribute-is-required">Required.</strong>
         </div>
       </header>
 
       <div class="attribute-values">
+          <article id="video-src-assetshtml-5-videomp4" class="value">
+            <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy src=&quot;/assets/HTML 5 Video.mp4&quot;" data-clipboard-text="src=&quot;/assets/HTML 5 Video.mp4&quot;">
+                      "/assets/HTML 5 Video.mp4"
+                  </code>
+                </h4>
+              <div class="value-description">
+                <p>You can use a <strong>relative</strong> path.</p>
+
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><video  src="/assets/HTML 5 Video.mp4" controls></video></div>
+            </aside>
+          </article>
       </div>
     </article>
-    <article id="video-autoplay" class="attribute">
+    <article id="video-autoplay" class="attribute attribute--novalue">
       <header class="attribute-header">
         <h3 class="attribute-name">
           <code class="tag" data-tooltip="Click to copy" data-clipboard-text="autoplay">
@@ -57,30 +84,26 @@ elementName: video
           </code>
         </h3>
         <div class="attribute-description">
-          <p>HelloWorld</p>
+          <p>The video will automatically start on load.</p>
 
+            <strong class="attribute-is-novalue">No value required.</strong>
         </div>
       </header>
 
       <div class="attribute-values">
+          <article id="video-autoplay-undefined" class="value">
+            <header class="value-header">
+              <div class="value-description">
+                
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><video  src="/assets/HTML 5 Video.mp4" controls></video></div>
+            </aside>
+          </article>
       </div>
     </article>
-    <article id="video-buffered" class="attribute">
-      <header class="attribute-header">
-        <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="buffered">
-            buffered
-          </code>
-        </h3>
-        <div class="attribute-description">
-          
-        </div>
-      </header>
-
-      <div class="attribute-values">
-      </div>
-    </article>
-    <article id="video-controls" class="attribute">
+    <article id="video-controls" class="attribute attribute--novalue">
       <header class="attribute-header">
         <h3 class="attribute-name">
           <code class="tag" data-tooltip="Click to copy" data-clipboard-text="controls">
@@ -88,59 +111,26 @@ elementName: video
           </code>
         </h3>
         <div class="attribute-description">
-          
+          <p>Show the browser&#39;s built-in audio controls.</p>
+
+            <strong class="attribute-is-novalue">No value required.</strong>
         </div>
       </header>
 
       <div class="attribute-values">
-      </div>
-    </article>
-    <article id="video-crossorigin" class="attribute">
-      <header class="attribute-header">
-        <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="crossorigin">
-            crossorigin
-          </code>
-        </h3>
-        <div class="attribute-description">
-          
-        </div>
-      </header>
-
-      <div class="attribute-values">
-          <article id="video-crossorigin-anonymous" class="value">
+          <article id="video-controls-undefined" class="value">
             <header class="value-header">
-                <h4 class="value-name">
-                  <code class="tag" data-tooltip="Click to copy crossorigin=&quot;anonymous&quot;" data-clipboard-text="crossorigin=&quot;anonymous&quot;">
-                      "anonymous"
-                  </code>
-                </h4>
               <div class="value-description">
                 
               </div>
             </header>
             <aside class="value-preview">
-              <div class="value-output"><video  crossorigin="anonymous"></video></div>
-            </aside>
-          </article>
-          <article id="video-crossorigin-use-credentials" class="value">
-            <header class="value-header">
-                <h4 class="value-name">
-                  <code class="tag" data-tooltip="Click to copy crossorigin=&quot;use-credentials&quot;" data-clipboard-text="crossorigin=&quot;use-credentials&quot;">
-                      "use-credentials"
-                  </code>
-                </h4>
-              <div class="value-description">
-                
-              </div>
-            </header>
-            <aside class="value-preview">
-              <div class="value-output"><video  crossorigin="use-credentials"></video></div>
+              <div class="value-output"><video  src="/assets/HTML 5 Video.mp4" controls></video></div>
             </aside>
           </article>
       </div>
     </article>
-    <article id="video-loop" class="attribute">
+    <article id="video-loop" class="attribute attribute--novalue">
       <header class="attribute-header">
         <h3 class="attribute-name">
           <code class="tag" data-tooltip="Click to copy" data-clipboard-text="loop">
@@ -148,14 +138,26 @@ elementName: video
           </code>
         </h3>
         <div class="attribute-description">
-          
+          <p>The video will loop when reaching the end.</p>
+
+            <strong class="attribute-is-novalue">No value required.</strong>
         </div>
       </header>
 
       <div class="attribute-values">
+          <article id="video-loop-undefined" class="value">
+            <header class="value-header">
+              <div class="value-description">
+                
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><video  src="/assets/HTML 5 Video.mp4" controls loop></video></div>
+            </aside>
+          </article>
       </div>
     </article>
-    <article id="video-muted" class="attribute">
+    <article id="video-muted" class="attribute attribute--novalue">
       <header class="attribute-header">
         <h3 class="attribute-name">
           <code class="tag" data-tooltip="Click to copy" data-clipboard-text="muted">
@@ -163,29 +165,26 @@ elementName: video
           </code>
         </h3>
         <div class="attribute-description">
-          
+          <p>The video will be muted by default.</p>
+
+            <strong class="attribute-is-novalue">No value required.</strong>
         </div>
       </header>
 
       <div class="attribute-values">
+          <article id="video-muted-undefined" class="value">
+            <header class="value-header">
+              <div class="value-description">
+                
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><video  src="/assets/HTML 5 Video.mp4" controls loop muted></video></div>
+            </aside>
+          </article>
       </div>
     </article>
-    <article id="video-played" class="attribute">
-      <header class="attribute-header">
-        <h3 class="attribute-name">
-          <code class="tag" data-tooltip="Click to copy" data-clipboard-text="played">
-            played
-          </code>
-        </h3>
-        <div class="attribute-description">
-          
-        </div>
-      </header>
-
-      <div class="attribute-values">
-      </div>
-    </article>
-    <article id="video-preload" class="attribute">
+    <article id="video-preload" class="attribute attribute--novalue">
       <header class="attribute-header">
         <h3 class="attribute-name">
           <code class="tag" data-tooltip="Click to copy" data-clipboard-text="preload">
@@ -193,11 +192,23 @@ elementName: video
           </code>
         </h3>
         <div class="attribute-description">
-          
+          <p>The video will be preloaded when the page loads.</p>
+
+            <strong class="attribute-is-novalue">No value required.</strong>
         </div>
       </header>
 
       <div class="attribute-values">
+          <article id="video-preload-undefined" class="value">
+            <header class="value-header">
+              <div class="value-description">
+                
+              </div>
+            </header>
+            <aside class="value-preview">
+              <div class="value-output"><video  src="/assets/HTML 5 Video.mp4" controls loop muted></video></div>
+            </aside>
+          </article>
       </div>
     </article>
     <article id="video-poster" class="attribute">
@@ -208,19 +219,26 @@ elementName: video
           </code>
         </h3>
         <div class="attribute-description">
-          
+          <p>Define an <strong>image</strong> to display until the video is played. If no poster is provided, the first frame of the video will be used.</p>
+
         </div>
       </header>
 
       <div class="attribute-values">
-          <article id="video-poster-" class="value">
+          <article id="video-poster-imageshtml-reference-sharepng" class="value">
             <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy poster=&quot;/images/html-reference-share.png&quot;" data-clipboard-text="poster=&quot;/images/html-reference-share.png&quot;">
+                      "/images/html-reference-share.png"
+                  </code>
+                </h4>
               <div class="value-description">
-                
+                <p>Use the HTML Reference share image as poster.</p>
+
               </div>
             </header>
             <aside class="value-preview">
-              <div class="value-output"><video  poster></video></div>
+              <div class="value-output"><video  src="/assets/HTML 5 Video.mp4" controls loop muted poster="/images/html-reference-share.png"></video></div>
             </aside>
           </article>
       </div>
@@ -233,19 +251,26 @@ elementName: video
           </code>
         </h3>
         <div class="attribute-description">
-          
+          <p>Define the <strong>height</strong> of the video in pixels.</p>
+
         </div>
       </header>
 
       <div class="attribute-values">
-          <article id="video-height-" class="value">
+          <article id="video-height-90" class="value">
             <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy height=&quot;90&quot;" data-clipboard-text="height=&quot;90&quot;">
+                      "90"
+                  </code>
+                </h4>
               <div class="value-description">
-                
+                <p>Set the height to <strong>90</strong> pixels.</p>
+
               </div>
             </header>
             <aside class="value-preview">
-              <div class="value-output"><video  height></video></div>
+              <div class="value-output"><video  src="/assets/HTML 5 Video.mp4" controls loop muted poster="/images/html-reference-share.png" height="90"></video></div>
             </aside>
           </article>
       </div>
@@ -258,19 +283,26 @@ elementName: video
           </code>
         </h3>
         <div class="attribute-description">
-          
+          <p>Define the <strong>width</strong> of the video in pixels.</p>
+
         </div>
       </header>
 
       <div class="attribute-values">
-          <article id="video-width-" class="value">
+          <article id="video-width-160" class="value">
             <header class="value-header">
+                <h4 class="value-name">
+                  <code class="tag" data-tooltip="Click to copy width=&quot;160&quot;" data-clipboard-text="width=&quot;160&quot;">
+                      "160"
+                  </code>
+                </h4>
               <div class="value-description">
-                
+                <p>Set the width to <strong>160</strong> pixels.</p>
+
               </div>
             </header>
             <aside class="value-preview">
-              <div class="value-output"><video  width></video></div>
+              <div class="value-output"><video  src="/assets/HTML 5 Video.mp4" controls loop muted poster="/images/html-reference-share.png" height="90" width="160"></video></div>
             </aside>
           </article>
       </div>
