@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var $elementShares = document.querySelectorAll('.element-share');
   var $modalInput = document.getElementById('modal-input');
   var baseURL = '' + window.location.origin + window.location.pathname;
-  baseURL = 'http://htmlreference.io/';
+  baseURL = 'https://htmlreference.io/';
   var facebookURL = 'https://www.facebook.com/sharer.php?u=http%3A%2F%2Fhtmlreference.io';
   var twitterURL = 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fhtmlreference.io&text=HTML%20Reference%3A%20a%20guide%20to%20all%20%23HTML%20elements%20and%20attributes';
 
