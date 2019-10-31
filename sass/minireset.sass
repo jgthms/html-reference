@@ -1,4 +1,4 @@
-/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 // Blocks
 html,
 body,
@@ -45,8 +45,6 @@ button,
 input,
 select,
 textarea
-  color: inherit
-  font-family: inherit
   margin: 0
 
 // Box sizing
@@ -54,16 +52,13 @@ html
   box-sizing: border-box
 
 *
-  box-sizing: inherit
-  &:before,
-  &:after
+  &,
+  &::before,
+  &::after
     box-sizing: inherit
 
 // Media
 img,
-embed,
-object,
-audio,
 video
   height: auto
   max-width: 100%
@@ -80,4 +75,5 @@ table
 td,
 th
   padding: 0
-  text-align: left
+  &:not([align])
+    text-align: left

@@ -19,8 +19,8 @@
   "author": "Jeremy Thomas <bbxdesign@gmail.com> (https://jgthms.com)",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
-    "node-sass": "^3.11.3",
-    "postcss-cli": "^2.6.0"
+    "autoprefixer": "^9.6.1",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.3"
   }
 }
